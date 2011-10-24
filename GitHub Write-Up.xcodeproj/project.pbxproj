@@ -21,7 +21,7 @@
 		CFB9DDE81455F71300BAE951 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB9DDE71455F71300BAE951 /* MobileCoreServices.framework */; };
 		CFB9DDEA1455F71300BAE951 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB9DDE91455F71300BAE951 /* CoreMedia.framework */; };
 		CFB9DDF01455F71400BAE951 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFB9DDEE1455F71400BAE951 /* InfoPlist.strings */; };
-		CFB9DDF21455F71400BAE951 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB9DDF11455F71400BAE951 /* main.m */; };
+		CFB9DDF21455F71400BAE951 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB9DDF11455F71400BAE951 /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CFB9DDF51455F71400BAE951 /* PhoneGap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB9DDF41455F71400BAE951 /* PhoneGap.framework */; };
 		CFB9DDFA1455F71400BAE951 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFB9DDF81455F71400BAE951 /* Localizable.strings */; };
 		CFB9DDFE1455F71400BAE951 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFB9DDFC1455F71400BAE951 /* Localizable.strings */; };
@@ -32,7 +32,8 @@
 		CFB9DE0A1455F71400BAE951 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB9DE091455F71400BAE951 /* Default@2x.png */; };
 		CFB9DE0C1455F71400BAE951 /* Capture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CFB9DE0B1455F71400BAE951 /* Capture.bundle */; };
 		CFB9DE0E1455F71400BAE951 /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFB9DE0D1455F71400BAE951 /* PhoneGap.plist */; };
-		CFB9DE121455F71400BAE951 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB9DE111455F71400BAE951 /* AppDelegate.m */; };
+		CFB9DE121455F71400BAE951 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB9DE111455F71400BAE951 /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CFB9DE251455FDC100BAE951 /* www in Resources */ = {isa = PBXBuildFile; fileRef = CFB9DE241455FDC100BAE951 /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,10 +51,10 @@
 		CFB9DDE51455F71300BAE951 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CFB9DDE71455F71300BAE951 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CFB9DDE91455F71300BAE951 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		CFB9DDED1455F71400BAE951 /* GitHub Write-Up-Info.plist */ = {isa = PBXFileReference; path = "GitHub Write-Up-Info.plist"; sourceTree = "<group>"; };
+		CFB9DDED1455F71400BAE951 /* GitHub Write-Up-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GitHub Write-Up-Info.plist"; sourceTree = "<group>"; };
 		CFB9DDEF1455F71400BAE951 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CFB9DDF11455F71400BAE951 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CFB9DDF31455F71400BAE951 /* GitHub Write-Up-Prefix.pch */ = {isa = PBXFileReference; path = "GitHub Write-Up-Prefix.pch"; sourceTree = "<group>"; };
+		CFB9DDF31455F71400BAE951 /* GitHub Write-Up-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitHub Write-Up-Prefix.pch"; sourceTree = "<group>"; };
 		CFB9DDF41455F71400BAE951 /* PhoneGap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneGap.framework; path = /Users/Shared/PhoneGap/Frameworks/PhoneGap.framework; sourceTree = "<absolute>"; };
 		CFB9DDF91455F71400BAE951 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CFB9DDFD1455F71400BAE951 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -64,9 +65,10 @@
 		CFB9DE091455F71400BAE951 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
 		CFB9DE0B1455F71400BAE951 /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
 		CFB9DE0D1455F71400BAE951 /* PhoneGap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PhoneGap.plist; sourceTree = "<group>"; };
-		CFB9DE101455F71400BAE951 /* AppDelegate.h */ = {isa = PBXFileReference; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		CFB9DE101455F71400BAE951 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		CFB9DE111455F71400BAE951 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		CFB9DE141455F71400BAE951 /* README */ = {isa = PBXFileReference; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		CFB9DE141455F71400BAE951 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		CFB9DE241455FDC100BAE951 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		CFB9DDBF1455F71300BAE951 = {
 			isa = PBXGroup;
 			children = (
+				CFB9DE241455FDC100BAE951 /* www */,
 				CFB9DDEB1455F71300BAE951 /* GitHub Write-Up */,
 				CFB9DDD01455F71300BAE951 /* Frameworks */,
 				CFB9DDCE1455F71300BAE951 /* Products */,
@@ -290,6 +293,7 @@
 				CFB9DE0A1455F71400BAE951 /* Default@2x.png in Resources */,
 				CFB9DE0C1455F71400BAE951 /* Capture.bundle in Resources */,
 				CFB9DE0E1455F71400BAE951 /* PhoneGap.plist in Resources */,
+				CFB9DE251455FDC100BAE951 /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +367,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -388,7 +392,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -412,8 +416,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GitHub Write-Up/GitHub Write-Up-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "GitHub Write-Up/GitHub Write-Up-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -428,8 +435,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GitHub Write-Up/GitHub Write-Up-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "GitHub Write-Up/GitHub Write-Up-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -454,6 +464,7 @@
 				CFB9DE191455F71400BAE951 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

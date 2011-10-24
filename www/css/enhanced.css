@@ -1,0 +1,753 @@
+body > .content {
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+
+.in-main-area-header {
+  position: absolute;
+  overflow: hidden;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+
+.in-dashboard-area-tracker,
+.in-searches-area-tracker,
+.in-instrument-area-tracker,
+.in-dashboard-area-member,
+.in-searches-area-member,
+.in-instrument-area-member {
+  position: absolute;
+  top: 0;
+  bottom: 0; }
+
+.in-dashboard-area-member,
+.in-searches-area-member,
+.in-instrument-area-member {
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+  .in-dashboard-area-member.active,
+  .in-searches-area-member.active,
+  .in-instrument-area-member.active {
+    z-index: 50; }
+
+.in-dashboard-area-tracker,
+.in-dashboard-area-member {
+  left: 0;
+  right: 0; }
+  .dashboard-area-active .in-dashboard-area-tracker, .dashboard-area-active
+  .in-dashboard-area-member {
+    left: 0;
+    right: 0; }
+  .searches-area-active .in-dashboard-area-tracker, .searches-area-active
+  .in-dashboard-area-member {
+    left: -100%;
+    right: 100%; }
+  .instrument-area-active .in-dashboard-area-tracker, .instrument-area-active
+  .in-dashboard-area-member {
+    left: -200%;
+    right: 200%; }
+
+.in-searches-area-tracker,
+.in-searches-area-member {
+  left: 100%;
+  right: -100%; }
+  .dashboard-area-active .in-searches-area-tracker, .dashboard-area-active
+  .in-searches-area-member {
+    left: 100%;
+    right: -100%; }
+  .searches-area-active .in-searches-area-tracker, .searches-area-active
+  .in-searches-area-member {
+    left: 0;
+    right: 0; }
+  .instrument-area-active .in-searches-area-tracker, .instrument-area-active
+  .in-searches-area-member {
+    left: -100%;
+    right: 100%; }
+
+.in-instrument-area-tracker,
+.in-instrument-area-member {
+  left: 200%;
+  right: -200%; }
+  .dashboard-area-active .in-instrument-area-tracker, .dashboard-area-active
+  .in-instrument-area-member {
+    left: 200%;
+    right: -200%; }
+  .searches-area-active .in-instrument-area-tracker, .searches-area-active
+  .in-instrument-area-member {
+    left: 100%;
+    right: -100%; }
+  .instrument-area-active .in-instrument-area-tracker, .instrument-area-active
+  .in-instrument-area-member {
+    left: 0;
+    right: 0; }
+
+.in-main-area-header {
+  top: 50%;
+  height: 69px;
+  left: 50%;
+  width: 69px;
+  margin-top: -34px;
+  margin-bottom: -34px;
+  background: transparent url(../images/wlogo.png) no-repeat; }
+  .livepage .in-main-area-header {
+    background: transparent;
+    margin: 0;
+    width: initial; }
+  .in-main-area-header h1 {
+    position: absolute;
+    top: 100%;
+    font-size: 50px;
+    text-transform: uppercase; }
+    .livepage .in-main-area-header h1 {
+      top: 0; }
+
+nav.in-upper-area,
+section.in-upper-area,
+nav.in-lower-area,
+section.in-lower-area {
+  position: absolute; }
+
+.search-nav-tracker {
+  left: -150px;
+  top: 0%;
+  margin-top: -115px;
+  width: 360px;
+  height: 230px; }
+  .livepage .search-nav-tracker {
+    left: 30px;
+    top: 60px;
+    margin-top: 0; }
+
+.search-tracker {
+  left: -150px;
+  top: 0%;
+  margin-top: -115px;
+  width: 0;
+  height: 0; }
+  .livepage .search-tracker {
+    left: 30px;
+    top: 60px;
+    width: 180px;
+    height: 180px;
+    margin-left: 180px;
+    margin-top: 50px; }
+
+.alerts-nav-tracker {
+  left: -150px;
+  top: 100%;
+  margin-top: -115px;
+  width: 360px;
+  height: 230px; }
+  .livepage .alerts-nav-tracker {
+    left: 30px;
+    top: 305px;
+    margin-top: 0; }
+
+.alerts-tracker {
+  left: -150px;
+  top: 100%;
+  margin-top: -115px;
+  width: 0;
+  height: 0; }
+  .livepage .alerts-tracker {
+    left: 30px;
+    top: 305px;
+    width: 180px;
+    height: 180px;
+    margin-left: 180px;
+    margin-top: 50px; }
+
+.past-searches-nav-tracker {
+  left: 225px;
+  top: 0%;
+  margin-top: -115px;
+  width: 360px;
+  height: 230px; }
+  .livepage .past-searches-nav-tracker {
+    left: 405px;
+    top: 60px;
+    margin-top: 0; }
+
+.past-searches-tracker {
+  left: 225px;
+  top: 0%;
+  margin-top: -115px;
+  width: 0;
+  height: 0; }
+  .livepage .past-searches-tracker {
+    left: 405px;
+    top: 60px;
+    width: 180px;
+    height: 180px;
+    margin-left: 180px;
+    margin-top: 50px; }
+
+.watchlists-nav-tracker {
+  left: 225px;
+  top: 100%;
+  margin-top: -115px;
+  width: 360px;
+  height: 230px; }
+  .livepage .watchlists-nav-tracker {
+    left: 405px;
+    top: 305px;
+    margin-top: 0; }
+
+.watchlists-tracker {
+  left: 225px;
+  top: 100%;
+  margin-top: -115px;
+  width: 0;
+  height: 0; }
+  .livepage .watchlists-tracker {
+    left: 405px;
+    top: 305px;
+    width: 180px;
+    height: 180px;
+    margin-left: 180px;
+    margin-top: 50px; }
+
+.news-and-reports-nav-tracker {
+  left: 600px;
+  top: 0%;
+  margin-top: -115px;
+  width: 360px;
+  height: 230px; }
+  .livepage .news-and-reports-nav-tracker {
+    left: 780px;
+    top: 60px;
+    margin-top: 0; }
+
+.news-and-reports-tracker {
+  left: 600px;
+  top: 0%;
+  margin-top: -115px;
+  width: 0;
+  height: 0; }
+  .livepage .news-and-reports-tracker {
+    left: 780px;
+    top: 60px;
+    width: 180px;
+    height: 180px;
+    margin-left: 180px;
+    margin-top: 50px; }
+
+.quicktrade-nav-tracker {
+  left: 600px;
+  top: 100%;
+  margin-top: -115px;
+  width: 360px;
+  height: 230px; }
+  .livepage .quicktrade-nav-tracker {
+    left: 780px;
+    top: 305px;
+    margin-top: 0; }
+
+.quicktrade-tracker {
+  left: 600px;
+  top: 100%;
+  margin-top: -115px;
+  width: 0;
+  height: 0; }
+  .livepage .quicktrade-tracker {
+    left: 780px;
+    top: 305px;
+    width: 180px;
+    height: 180px;
+    margin-left: 180px;
+    margin-top: 50px; }
+
+.orders-and-positions-nav-tracker {
+  left: 975px;
+  top: 0%;
+  margin-top: -115px;
+  width: 360px;
+  height: 230px; }
+  .livepage .orders-and-positions-nav-tracker {
+    left: 1155px;
+    top: 60px;
+    margin-top: 0; }
+
+.orders-and-positions-tracker {
+  left: 975px;
+  top: 0%;
+  margin-top: -115px;
+  width: 0;
+  height: 0; }
+  .livepage .orders-and-positions-tracker {
+    left: 1155px;
+    top: 60px;
+    width: 180px;
+    height: 180px;
+    margin-left: 180px;
+    margin-top: 50px; }
+
+.history-nav-tracker {
+  left: 975px;
+  top: 100%;
+  margin-top: -115px;
+  width: 360px;
+  height: 230px; }
+  .livepage .history-nav-tracker {
+    left: 1155px;
+    top: 305px;
+    margin-top: 0; }
+
+.history-tracker {
+  left: 975px;
+  top: 100%;
+  margin-top: -115px;
+  width: 0;
+  height: 0; }
+  .livepage .history-tracker {
+    left: 1155px;
+    top: 305px;
+    width: 180px;
+    height: 180px;
+    margin-left: 180px;
+    margin-top: 50px; }
+
+.livepage .main-area-active .in-upper-area-member header h1,
+.livepage .main-area-active .in-lower-area-member header h1 {
+  font-size: 2em;
+  margin: .5em .25em; }
+.livepage .main-area-active .in-upper-area-member header h2,
+.livepage .main-area-active .in-lower-area-member header h2 {
+  font-size: 1.6em; }
+.livepage .main-area-active .in-upper-area-member header h3,
+.livepage .main-area-active .in-lower-area-member header h3 {
+  font-size: 1.4em; }
+.livepage .main-area-active .in-main-area-header {
+  left: 30px;
+  right: 0;
+  top: 15px;
+  height: 60px; }
+.livepage .main-area-active .search-tracker {
+  width: 180px;
+  height: 180px; }
+.livepage .main-area-active .alerts-tracker {
+  width: 180px;
+  height: 180px; }
+.livepage .main-area-active .past-searches-tracker {
+  width: 180px;
+  height: 180px; }
+.livepage .main-area-active .watchlists-tracker {
+  width: 180px;
+  height: 180px; }
+.livepage .main-area-active .news-and-reports-tracker {
+  width: 180px;
+  height: 180px; }
+.livepage .main-area-active .quicktrade-tracker {
+  width: 180px;
+  height: 180px; }
+.livepage .main-area-active .orders-and-positions-tracker {
+  width: 180px;
+  height: 180px; }
+.livepage .main-area-active .history-tracker {
+  width: 180px;
+  height: 180px; }
+
+.livepage .upper-area-active {
+  	/*
+  	.past-searches-tracker,
+  	.news-and-reports-tracker,
+  	.watchlists-tracker,
+  	.in-upper-area-member {
+  		left: $upper-full-side-gap;
+  		right: $upper-full-side-gap;
+  		top: $main-header-height + $main-mini-header-height; 
+  	}
+  
+  	.in-lower-area-member {
+  		left: $upper-full-side-gap;
+  		right: $upper-full-side-gap;
+  		top: 100%;
+  	}
+  	*/ }
+  .livepage .upper-area-active .in-main-area-header {
+    top: -100%;
+    margin-top: 15px;
+    height: 60px; }
+  .livepage .upper-area-active #search-nav.target-active {
+    z-index: 20; }
+  .livepage .upper-area-active .search-nav-tracker {
+    left: 10px;
+    top: 0; }
+  .livepage .upper-area-active #search {
+    z-index: 10; }
+    .livepage .upper-area-active #search.active {
+      z-index: 20; }
+  .livepage .upper-area-active .search-tracker {
+    left: 0px;
+    right: 50px;
+    top: 50px;
+    bottom: 0;
+    margin-bottom: 110px;
+    width: initial;
+    height: initial;
+    margin-left: 0;
+    margin-top: 0; }
+  .livepage .upper-area-active #past-searches-nav.target-active {
+    z-index: 20; }
+  .livepage .upper-area-active .past-searches-nav-tracker {
+    left: 375px;
+    top: 0; }
+  .livepage .upper-area-active #past-searches {
+    z-index: 10; }
+    .livepage .upper-area-active #past-searches.active {
+      z-index: 20; }
+  .livepage .upper-area-active .past-searches-tracker {
+    left: 25px;
+    right: 25px;
+    top: 50px;
+    bottom: 0;
+    margin-bottom: 110px;
+    width: initial;
+    height: initial;
+    margin-left: 0;
+    margin-top: 0; }
+  .livepage .upper-area-active #news-and-reports-nav.target-active {
+    z-index: 20; }
+  .livepage .upper-area-active .news-and-reports-nav-tracker {
+    left: 740px;
+    top: 0; }
+  .livepage .upper-area-active #news-and-reports {
+    z-index: 10; }
+    .livepage .upper-area-active #news-and-reports.active {
+      z-index: 20; }
+  .livepage .upper-area-active .news-and-reports-tracker {
+    left: 25px;
+    right: 25px;
+    top: 50px;
+    bottom: 0;
+    margin-bottom: 110px;
+    width: initial;
+    height: initial;
+    margin-left: 0;
+    margin-top: 0; }
+  .livepage .upper-area-active #watchlists {
+    z-index: 10; }
+    .livepage .upper-area-active #watchlists.active {
+      z-index: 20; }
+  .livepage .upper-area-active #watchlists-nav.target-active {
+    z-index: 20; }
+  .livepage .upper-area-active .watchlists-nav-tracker {
+    left: 1105px;
+    top: 0; }
+  .livepage .upper-area-active .watchlists-tracker {
+    left: 25px;
+    right: 25px;
+    top: 50px;
+    bottom: 0;
+    margin-bottom: 110px;
+    width: initial;
+    height: initial;
+    margin-left: 0;
+    margin-top: 0; }
+  .livepage .upper-area-active #quicktrade {
+    z-index: 10; }
+    .livepage .upper-area-active #quicktrade.active {
+      z-index: 20; }
+  .livepage .upper-area-active #quicktrade-nav.target-active {
+    z-index: 20; }
+  .livepage .upper-area-active .quicktrade-nav-tracker {
+    left: 1470px;
+    top: 0; }
+  .livepage .upper-area-active .quicktrade-tracker {
+    left: 50px;
+    right: 0px;
+    top: 50px;
+    bottom: 0;
+    margin-bottom: 110px;
+    width: initial;
+    height: initial;
+    margin-left: 0;
+    margin-top: 0; }
+  .livepage .upper-area-active .alerts-nav-tracker {
+    left: 10px;
+    top: 100%;
+    margin-top: -50px; }
+  .livepage .upper-area-active .alerts-tracker {
+    left: 25px;
+    right: 25px;
+    top: 100%;
+    bottom: -100%;
+    margin-bottom: 110px; }
+  .livepage .upper-area-active .orders-and-positions-nav-tracker {
+    left: 375px;
+    top: 100%;
+    margin-top: -50px; }
+  .livepage .upper-area-active .orders-and-positions-tracker {
+    left: 25px;
+    right: 25px;
+    top: 100%;
+    bottom: -100%;
+    margin-bottom: 110px; }
+  .livepage .upper-area-active .history-nav-tracker {
+    left: 740px;
+    top: 100%;
+    margin-top: -50px; }
+  .livepage .upper-area-active .history-tracker {
+    left: 25px;
+    right: 25px;
+    top: 100%;
+    bottom: -100%;
+    margin-bottom: 110px; }
+
+.livepage .lower-area-active .in-main-area-header {
+  top: -100%;
+  margin-top: 15px;
+  height: 60px; }
+.livepage .lower-area-active #search-nav.target-active {
+  z-index: 20; }
+.livepage .lower-area-active .search-nav-tracker {
+  left: 10px;
+  top: 100%;
+  margin-top: -50px; }
+.livepage .lower-area-active #search {
+  z-index: 10; }
+  .livepage .lower-area-active #search.active {
+    z-index: 20; }
+.livepage .lower-area-active .search-tracker {
+  left: 0;
+  right: 50px;
+  top: 100%;
+  bottom: -100%;
+  margin-bottom: 110px; }
+.livepage .lower-area-active #past-searches-nav.target-active {
+  z-index: 20; }
+.livepage .lower-area-active .past-searches-nav-tracker {
+  left: 375px;
+  top: 100%;
+  margin-top: -50px; }
+.livepage .lower-area-active #past-searches {
+  z-index: 10; }
+  .livepage .lower-area-active #past-searches.active {
+    z-index: 20; }
+.livepage .lower-area-active .past-searches-tracker {
+  left: 25px;
+  right: 25px;
+  top: 100%;
+  bottom: -100%;
+  margin-bottom: 110px; }
+.livepage .lower-area-active #news-and-reports-nav.target-active {
+  z-index: 20; }
+.livepage .lower-area-active .news-and-reports-nav-tracker {
+  left: 740px;
+  top: 60px;
+  top: 100%;
+  margin-top: -50px; }
+.livepage .lower-area-active #news-and-reports {
+  z-index: 10; }
+  .livepage .lower-area-active #news-and-reports.active {
+    z-index: 20; }
+.livepage .lower-area-active .news-and-reports-tracker {
+  left: 25px;
+  right: 25px;
+  top: 100%;
+  bottom: -100%;
+  margin-bottom: 110px; }
+.livepage .lower-area-active #watchlists {
+  z-index: 10; }
+  .livepage .lower-area-active #watchlists.active {
+    z-index: 20; }
+.livepage .lower-area-active #watchlists-nav.target-active {
+  z-index: 20; }
+.livepage .lower-area-active .watchlists-nav-tracker {
+  left: 1105px;
+  top: 60px;
+  top: 100%;
+  margin-top: -50px; }
+.livepage .lower-area-active .watchlists-tracker {
+  left: 25px;
+  right: 25px;
+  top: 100%;
+  bottom: -100%;
+  margin-bottom: 110px; }
+.livepage .lower-area-active #quicktrade {
+  z-index: 10; }
+  .livepage .lower-area-active #quicktrade.active {
+    z-index: 20; }
+.livepage .lower-area-active #quicktrade-nav.target-active {
+  z-index: 20; }
+.livepage .lower-area-active .quicktrade-nav-tracker {
+  left: 1470px;
+  top: 100%;
+  margin-top: -50px; }
+.livepage .lower-area-active .quicktrade-tracker {
+  left: 50px;
+  right: 0;
+  top: 100%;
+  bottom: -100%;
+  margin-bottom: 110px; }
+.livepage .lower-area-active #alerts-nav {
+  z-index: 10; }
+  .livepage .lower-area-active #alerts-nav.active {
+    z-index: 20; }
+.livepage .lower-area-active .alerts-nav-tracker {
+  left: 10px;
+  top: 0; }
+.livepage .lower-area-active #alerts {
+  z-index: 10; }
+  .livepage .lower-area-active #alerts.active {
+    z-index: 20; }
+.livepage .lower-area-active .alerts-tracker {
+  left: 0px;
+  right: 50px;
+  top: 50px;
+  bottom: 0;
+  margin-bottom: 110px;
+  width: initial;
+  height: initial;
+  margin-left: 0;
+  margin-top: 0; }
+.livepage .lower-area-active #orders-and-positions-nav {
+  z-index: 10; }
+  .livepage .lower-area-active #orders-and-positions-nav.active {
+    z-index: 20; }
+.livepage .lower-area-active .orders-and-positions-nav-tracker {
+  left: 375px;
+  top: 0; }
+.livepage .lower-area-active #orders-and-positions {
+  z-index: 10; }
+  .livepage .lower-area-active #orders-and-positions.active {
+    z-index: 20; }
+.livepage .lower-area-active .orders-and-positions-tracker {
+  left: 25px;
+  right: 25px;
+  top: 50px;
+  bottom: 0;
+  margin-bottom: 110px;
+  width: initial;
+  height: initial;
+  margin-left: 0;
+  margin-top: 0; }
+.livepage .lower-area-active #history-nav {
+  z-index: 10; }
+  .livepage .lower-area-active #history-nav.active {
+    z-index: 20; }
+.livepage .lower-area-active .history-nav-tracker {
+  left: 740px;
+  top: 0; }
+.livepage .lower-area-active #history {
+  z-index: 10; }
+  .livepage .lower-area-active #history.active {
+    z-index: 20; }
+.livepage .lower-area-active .history-tracker {
+  left: 50px;
+  right: 0px;
+  top: 50px;
+  bottom: 0;
+  margin-bottom: 110px;
+  width: initial;
+  height: initial;
+  margin-left: 0;
+  margin-top: 0; }
+
+.livepage nav.in-upper-area,
+.livepage .in-upper-area-member,
+.livepage nav.in-lower-area,
+.livepage .in-lower-area-member {
+  position: absolute;
+  overflow: hidden;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+
+nav.in-upper-area,
+nav.in-lower-area {
+  width: 360px;
+  height: 230px; }
+  nav.in-upper-area h1,
+  nav.in-lower-area h1 {
+    font-size: 2em;
+    margin: .5em .25em; }
+  nav.in-upper-area h2,
+  nav.in-lower-area h2 {
+    font-size: 1.6em; }
+  nav.in-upper-area h3,
+  nav.in-lower-area h3 {
+    font-size: 1.4em; }
+
+/*
+@import "windowing/dashboard-area.scss";
+@import "windowing/searches-area.scss";
+@import "windowing/instrument-area.scss";
+*/
+.indicators {
+  position: absolute;
+  overflow: visible; }
+  .indicators.topleft {
+    left: 0;
+    top: 0; }
+  .indicators.topcenter {
+    left: 50%;
+    top: 0;
+    margin-left: -100px;
+    width: 200px; }
+  .indicators.topright {
+    right: 0;
+    top: 0; }
+  .indicators.topbg {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 43px; }
+  .indicators.bottomleft {
+    left: 0;
+    bottom: 0; }
+  .indicators.bottomcenter {
+    left: 50%;
+    bottom: 0;
+    margin-left: -100px;
+    width: 200px; }
+  .indicators.bottomright {
+    right: 0;
+    bottom: 0; }
+  .indicators.bottombg {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0px; }
+  .indicators .drop-area {
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    text-align: center; }
+  .indicators #make-tab {
+    display: none; }
+  .indicators button {
+    color: #08233e;
+    font: 12px Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+    padding: 6px 14px; }
+
+/*
+ * Media queries for responsive design http://goo.gl/awe0l
+ */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 569px) {
+  /* Styles */ }
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) and (max-device-width: 569px) {
+  /* Styles */ }
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) and (max-device-width: 320px) {
+  /* Styles */ }
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  /* Styles */ }
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  /* Styles */ }
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  /* Styles */ }
+/* iPhone 4 and high pixel ratio devices ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+  /* Styles */ }
