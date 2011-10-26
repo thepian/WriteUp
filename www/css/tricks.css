@@ -1,0 +1,56 @@
+html {
+    background-image: url(../images/metalTexture.gif);
+    height: 100%;
+}
+body {
+    /*
+    background-image: url(../images/metalTexture.gif);
+    */
+    height: 100%;
+    
+    
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.55)), color-stop(40%,rgba(0,0,0,0)), color-stop(60%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.55))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0.55) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0) 60%,rgba(0,0,0,0.55) 100%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(left, rgba(0,0,0,0.55) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0) 60%,rgba(0,0,0,0.55) 100%); /* W3C */
+}
+
+#logo {
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin: -84px 0 0 -84px;
+    padding-top: 20px;
+    width:168px;
+    height:168px;
+    overflow:visible;
+    
+    background-image: url(../images/quill.png);
+    background-repeat: no-repeat;
+    background-position-x: 40px;
+    background-position-y: -8px;
+}
+#logo h1 {
+    font-family: Baskerville;
+    font-size: 50px;
+    color: #aaa;
+    text-shadow: 1px 1px white, -1px -1px #444;
+}
+#logo h2 {
+    font-family: Baskerville;
+    font-size: 18px;
+    color: #aaa;
+    text-shadow: 1px 1px white, -1px -1px #444;
+    padding-left: 43px;
+}
+
+#logo input[type=search] {
+    border-radius: 12px;
+}
+
+#logo ul {
+    margin-left: -10px;
+}
+#logo ul a {
+    font-family: Baskerville;
+
+}
