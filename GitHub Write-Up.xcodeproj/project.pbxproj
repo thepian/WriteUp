@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CFAB65E5145D829E0060D387 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = CFAB65E4145D829E0060D387 /* Default-Portrait~ipad.png */; };
+		CFAB65E8145D940F0060D387 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = CFAB65E6145D940F0060D387 /* Default-Landscape.png */; };
+		CFAB65E9145D940F0060D387 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = CFAB65E7145D940F0060D387 /* Default-Portrait.png */; };
+		CFAB65EB145D94360060D387 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = CFAB65EA145D94360060D387 /* Default-Landscape~ipad.png */; };
 		CFB9DDD21455F71300BAE951 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB9DDD11455F71300BAE951 /* Foundation.framework */; };
 		CFB9DDD41455F71300BAE951 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB9DDD31455F71300BAE951 /* UIKit.framework */; };
 		CFB9DDD61455F71300BAE951 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB9DDD51455F71300BAE951 /* CoreGraphics.framework */; };
@@ -34,9 +38,59 @@
 		CFB9DE0E1455F71400BAE951 /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFB9DE0D1455F71400BAE951 /* PhoneGap.plist */; };
 		CFB9DE121455F71400BAE951 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB9DE111455F71400BAE951 /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CFB9DE251455FDC100BAE951 /* www in Resources */ = {isa = PBXBuildFile; fileRef = CFB9DE241455FDC100BAE951 /* www */; };
+		CFB9DE4D145616BB00BAE951 /* ObjectiveGit in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB9DE461456167C00BAE951 /* ObjectiveGit */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CFB9DE411456167C00BAE951 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFB9DE321456167B00BAE951 /* ObjectiveGitFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = ObjectiveGit;
+		};
+		CFB9DE431456167C00BAE951 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFB9DE321456167B00BAE951 /* ObjectiveGitFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BDD8AEDF1313311100CB5D40;
+			remoteInfo = Tests;
+		};
+		CFB9DE451456167C00BAE951 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFB9DE321456167B00BAE951 /* ObjectiveGitFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04DB4645133AB57600D9C624;
+			remoteInfo = "ObjectiveGit-iOS";
+		};
+		CFB9DE471456167C00BAE951 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFB9DE321456167B00BAE951 /* ObjectiveGitFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BDD9C3D5133BA556003708E7;
+			remoteInfo = "Tests-iOS";
+		};
+		CFB9DE491456167C00BAE951 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFB9DE321456167B00BAE951 /* ObjectiveGitFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DDB97BA9141C90F60001F17A;
+			remoteInfo = "libgit2-ios";
+		};
+		CFB9DE4B1456167C00BAE951 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFB9DE321456167B00BAE951 /* ObjectiveGitFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DD5695E7141C934800E1B1CA;
+			remoteInfo = libgit2;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		CFAB65E4145D829E0060D387 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "GitHub Write-Up/Resources/splash/Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		CFAB65E6145D940F0060D387 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape.png"; path = "GitHub Write-Up/Resources/splash/Default-Landscape.png"; sourceTree = "<group>"; };
+		CFAB65E7145D940F0060D387 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait.png"; path = "GitHub Write-Up/Resources/splash/Default-Portrait.png"; sourceTree = "<group>"; };
+		CFAB65EA145D94360060D387 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "GitHub Write-Up/Resources/splash/Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		CFB9DDCD1455F71300BAE951 /* GitHub Write-Up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub Write-Up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB9DDD11455F71300BAE951 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CFB9DDD31455F71300BAE951 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -69,6 +123,10 @@
 		CFB9DE111455F71400BAE951 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
 		CFB9DE141455F71400BAE951 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		CFB9DE241455FDC100BAE951 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		CFB9DE271456118600BAE951 /* Rough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rough.png; path = Resources/splash/Rough.png; sourceTree = "<group>"; };
+		CFB9DE321456167B00BAE951 /* ObjectiveGitFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjectiveGitFramework.xcodeproj; path = "../objective-git/ObjectiveGitFramework.xcodeproj"; sourceTree = "<group>"; };
+		CFB9DE4E1457311E00BAE951 /* iPadDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadDefault.png; path = Resources/splash/iPadDefault.png; sourceTree = "<group>"; };
+		CFB9DE501457324200BAE951 /* iPadDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadDefault.png; path = "GitHub Write-Up/iPadDefault.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB9DE4D145616BB00BAE951 /* ObjectiveGit in Frameworks */,
 				CFB9DDD21455F71300BAE951 /* Foundation.framework in Frameworks */,
 				CFB9DDD41455F71300BAE951 /* UIKit.framework in Frameworks */,
 				CFB9DDD61455F71300BAE951 /* CoreGraphics.framework in Frameworks */,
@@ -106,6 +165,12 @@
 		CFB9DDBF1455F71300BAE951 = {
 			isa = PBXGroup;
 			children = (
+				CFAB65EA145D94360060D387 /* Default-Landscape~ipad.png */,
+				CFAB65E6145D940F0060D387 /* Default-Landscape.png */,
+				CFAB65E7145D940F0060D387 /* Default-Portrait.png */,
+				CFAB65E4145D829E0060D387 /* Default-Portrait~ipad.png */,
+				CFB9DE321456167B00BAE951 /* ObjectiveGitFramework.xcodeproj */,
+				CFB9DE501457324200BAE951 /* iPadDefault.png */,
 				CFB9DE241455FDC100BAE951 /* www */,
 				CFB9DDEB1455F71300BAE951 /* GitHub Write-Up */,
 				CFB9DDD01455F71300BAE951 /* Frameworks */,
@@ -206,6 +271,8 @@
 		CFB9DE061455F71400BAE951 /* splash */ = {
 			isa = PBXGroup;
 			children = (
+				CFB9DE4E1457311E00BAE951 /* iPadDefault.png */,
+				CFB9DE271456118600BAE951 /* Rough.png */,
 				CFB9DE071455F71400BAE951 /* Default.png */,
 				CFB9DE091455F71400BAE951 /* Default@2x.png */,
 			);
@@ -227,6 +294,19 @@
 				CFB9DE141455F71400BAE951 /* README */,
 			);
 			name = Plugins;
+			sourceTree = "<group>";
+		};
+		CFB9DE331456167B00BAE951 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFB9DE421456167C00BAE951 /* ObjectiveGit.framework */,
+				CFB9DE441456167C00BAE951 /* Tests.app */,
+				CFB9DE461456167C00BAE951 /* ObjectiveGit */,
+				CFB9DE481456167C00BAE951 /* Tests-iOS.app */,
+				CFB9DE4A1456167C00BAE951 /* libgit2-ios.a */,
+				CFB9DE4C1456167C00BAE951 /* libgit2.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +351,12 @@
 			mainGroup = CFB9DDBF1455F71300BAE951;
 			productRefGroup = CFB9DDCE1455F71300BAE951 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CFB9DE331456167B00BAE951 /* Products */;
+					ProjectRef = CFB9DE321456167B00BAE951 /* ObjectiveGitFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CFB9DDCC1455F71300BAE951 /* GitHub Write-Up */,
@@ -278,11 +364,60 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		CFB9DE421456167C00BAE951 /* ObjectiveGit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ObjectiveGit.framework;
+			remoteRef = CFB9DE411456167C00BAE951 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CFB9DE441456167C00BAE951 /* Tests.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Tests.app;
+			remoteRef = CFB9DE431456167C00BAE951 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CFB9DE461456167C00BAE951 /* ObjectiveGit */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = ObjectiveGit;
+			remoteRef = CFB9DE451456167C00BAE951 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CFB9DE481456167C00BAE951 /* Tests-iOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Tests-iOS.app";
+			remoteRef = CFB9DE471456167C00BAE951 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CFB9DE4A1456167C00BAE951 /* libgit2-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libgit2-ios.a";
+			remoteRef = CFB9DE491456167C00BAE951 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CFB9DE4C1456167C00BAE951 /* libgit2.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libgit2.a;
+			remoteRef = CFB9DE4B1456167C00BAE951 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		CFB9DDC81455F71300BAE951 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFAB65EB145D94360060D387 /* Default-Landscape~ipad.png in Resources */,
+				CFAB65E8145D940F0060D387 /* Default-Landscape.png in Resources */,
+				CFAB65E9145D940F0060D387 /* Default-Portrait.png in Resources */,
+				CFAB65E5145D829E0060D387 /* Default-Portrait~ipad.png in Resources */,
 				CFB9DDF01455F71400BAE951 /* InfoPlist.strings in Resources */,
 				CFB9DDFA1455F71400BAE951 /* Localizable.strings in Resources */,
 				CFB9DDFE1455F71400BAE951 /* Localizable.strings in Resources */,
