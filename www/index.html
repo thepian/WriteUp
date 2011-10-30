@@ -47,13 +47,22 @@
 	<link rel="stylesheet" href="css/basic.css" id="basic-css">
     <link rel="stylesheet" href="css/tricks.css">
 	<link href="css/enhanced.css" media="only all" rel="stylesheet">
+    <script>
+    function home_page() {
+        alert("home page");
+    }
+    </script>
 </head>
 <body>
+    <object data="images/logo.svg" type="image/svg+xml" title="Logo" name="logo" id="logo">
+    </object>
+    <!--
     <div id="logo">
         <h1>github</h1>
         <h2>Write-up</h2>
         <div style="height:20px;"></div>
     </div>
+    -->
     
     
     <nav id="side">
@@ -66,19 +75,21 @@
             </ul>
         </div>
         
-        <div class="buttons">
             <!--
             <header>Fresh Translation</header>
             -->
-            <button>Page</button>
-            <button>Blog</button>
-            <button>Wiki</button>
-            <button>Issues</button>
-            
-            <button>Projects</button>
-            <button>Settings</button>
-            <object data="images/nav-btns.svg" type="image/svg+xml" width="1200" height="800"></object>
-            <img src="images/nav-btns.svg" type="image/svg+xml">
+        <div class="buttons">
+            <object data="images/icons/projects.svg" type="image/svg+xml" title="Projects" name="projects" id="projects-button">
+            </object>
+            <object data="images/icons/homepage.svg" type="image/svg+xml" title="Homepage" name="homepage" id="homepage-button">
+            </object>
+            <object data="images/icons/wiki.svg" type="image/svg+xml" title="Wiki" name="wiki" id="wiki-button">
+            </object>
+            <object data="images/icons/issues.svg" type="image/svg+xml" title="Issues" name="issues" id="issues-button">
+            </object>
+            <object data="images/icons/settings.svg" type="image/svg+xml" title="Settings" name="settings" id="settings-button">
+            </object>
+
         </div>
     </nav>
     <header id="doc-title">

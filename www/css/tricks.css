@@ -1,12 +1,14 @@
 html {
     background-image: url(../images/metalTexture.gif);
     height: 100%;
+    overflow:hidden;
 }
 body {
     /*
     background-image: url(../images/metalTexture.gif);
     */
     height: 100%;
+    overflow:hidden;
     
     
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.85)), color-stop(40%,rgba(0,0,0,0.6)), color-stop(60%,rgba(0,0,0,0.6)), color-stop(100%,rgba(0,0,0,0.85))); /* Chrome,Safari4+ */
@@ -18,16 +20,19 @@ body {
     position: absolute;
     left:50%;
     top:50%;
-    margin: -84px 0 0 -84px;
+    margin: -100px 0 0 -100px;
     padding-top: 20px;
-    width:168px;
-    height:168px;
+    width:200px;
+    height:200px;
     overflow:visible;
+}
+div#logo {
     
     background-image: url(../images/quill.png);
     background-repeat: no-repeat;
     background-position-x: 42px;
     background-position-y: -4px;
+    
 }
 #logo h1 {
     font-family: Baskerville;

@@ -2,6 +2,7 @@
     position:absolute;
     left:-200px; width:370px;
     top:0;bottom:0;
+    z-index: 10;
 }
 
 #side .projects {
@@ -10,13 +11,17 @@
 }
 #side .buttons {
     position:absolute;
-    right:0; width:70px;
+    right:0; width:35px;
     top:0; bottom:0;
+}
+#side .buttons object {
+  width:31px; height:31px;
+  margin:2px;
 }
 
 #doc-title {
     position:absolute;
-    left:70px; right:0;
+    left:170px; right:0;
     top:0; height:30px;
     
 }

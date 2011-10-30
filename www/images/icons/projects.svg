@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   width="31"
+   height="31"
+   aria-pressed="false"
+   xml:space="preserve"
+   sodipodi:docname="projects.svg">
+
+   <metadata id="metadata8">
+
+     <rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF>
+  </metadata>
+
+  <style type="text/css">
+    svg[aria-pressed="true"] #g3519 {
+      fill:white;
+    }
+  </style>
+
+  <defs
+     id="defs6"><linearGradient
+       id="linearGradient10896"><stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop10898" /><stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop10900" /></linearGradient><clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath664"><path
+         d="m 0,2880 2880,0 L 2880,0 0,0 0,2880 z"
+         id="path666"
+         inkscape:connector-curvature="0" /></clipPath><clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath820"><path
+         d="m 0,2880 2880,0 L 2880,0 0,0 0,2880 z"
+         id="path822"
+         inkscape:connector-curvature="0" /></clipPath></defs><sodipodi:namedview
+     pagecolor="#878389"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     id="namedview4"
+     showgrid="false"
+     width="120px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+
+  <g
+     id="g10"
+
+     transform="matrix(1.25,0,0,-1.25,-14.786736,93.407471)"><g
+       id="g3519"
+       transform="matrix(0.33184276,0,0,0.33184276,-84.240544,-175.95778)"
+       style="fill:none;stroke:#ffffff;stroke-opacity:1"><path
+         inkscape:connector-curvature="0"
+         id="path2700"
+         style="fill:none;stroke:#ffffff;stroke-opacity:1"
+         d="m 309.41168,735.32471 52.616,0 0,11.563 -52.616,0 0,-11.563 z" /><path
+         inkscape:connector-curvature="0"
+         id="path2702"
+         style="fill:none;stroke:#ffffff;stroke-opacity:1"
+         d="m 309.41168,710.73571 52.616,0 0,11.563 -52.616,0 0,-11.563 z" /><path
+         inkscape:connector-curvature="0"
+         id="path2704"
+         style="fill:none;stroke:#ffffff;stroke-opacity:1"
+         d="m 309.41168,686.01671 52.616,0 0,11.563 -52.616,0 0,-11.563 z" /><g
+         transform="translate(295.77538,746.88731)"
+         id="g2706"
+         style="fill:none;stroke:#ffffff;stroke-opacity:1"><path
+           inkscape:connector-curvature="0"
+           id="path2708"
+           style="fill:none;stroke:#ffffff;stroke-opacity:1"
+           d="m 0,0 c -3.188,0 -5.771,-2.584 -5.771,-5.771 0,-3.187 2.583,-5.772 5.771,-5.772 3.188,0 5.771,2.585 5.771,5.772 C 5.771,-2.584 3.188,0 0,0" /></g><g
+         transform="translate(295.77538,722.32971)"
+         id="g2710"
+         style="fill:none;stroke:#ffffff;stroke-opacity:1"><path
+           inkscape:connector-curvature="0"
+           id="path2712"
+           style="fill:none;stroke:#ffffff;stroke-opacity:1"
+           d="m 0,0 c -3.188,0 -5.771,-2.584 -5.771,-5.771 0,-3.187 2.583,-5.771 5.771,-5.771 3.188,0 5.771,2.584 5.771,5.771 C 5.771,-2.584 3.188,0 0,0" /></g><g
+         transform="translate(295.77538,697.66371)"
+         id="g2714"
+         style="fill:none;stroke:#ffffff;stroke-opacity:1"><path
+           inkscape:connector-curvature="0"
+           id="path2716"
+           style="fill:none;stroke:#ffffff;stroke-opacity:1"
+           d="m 0,0 c -3.188,0 -5.771,-2.584 -5.771,-5.771 0,-3.187 2.583,-5.771 5.771,-5.771 3.188,0 5.771,2.584 5.771,5.771 C 5.771,-2.584 3.188,0 0,0" /></g></g></g>
+
+  </svg>
