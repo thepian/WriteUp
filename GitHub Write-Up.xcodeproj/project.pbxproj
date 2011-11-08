@@ -126,7 +126,6 @@
 		CFB9DE271456118600BAE951 /* Rough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rough.png; path = Resources/splash/Rough.png; sourceTree = "<group>"; };
 		CFB9DE321456167B00BAE951 /* ObjectiveGitFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjectiveGitFramework.xcodeproj; path = "../objective-git/ObjectiveGitFramework.xcodeproj"; sourceTree = "<group>"; };
 		CFB9DE4E1457311E00BAE951 /* iPadDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadDefault.png; path = Resources/splash/iPadDefault.png; sourceTree = "<group>"; };
-		CFB9DE501457324200BAE951 /* iPadDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadDefault.png; path = "GitHub Write-Up/iPadDefault.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +169,6 @@
 				CFAB65E7145D940F0060D387 /* Default-Portrait.png */,
 				CFAB65E4145D829E0060D387 /* Default-Portrait~ipad.png */,
 				CFB9DE321456167B00BAE951 /* ObjectiveGitFramework.xcodeproj */,
-				CFB9DE501457324200BAE951 /* iPadDefault.png */,
 				CFB9DE241455FDC100BAE951 /* www */,
 				CFB9DDEB1455F71300BAE951 /* GitHub Write-Up */,
 				CFB9DDD01455F71300BAE951 /* Frameworks */,
