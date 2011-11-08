@@ -48,7 +48,15 @@
     <link rel="stylesheet" href="css/tricks.css">
 	<link href="css/enhanced.css" media="only all" rel="stylesheet">
     <script>
-    function home_page() {
+        function when_deviceready() {
+            setTimeout(function() {
+                       console.log("removing splash screen");    
+                       navigator.splashscreen.hide();
+                       }, 70);
+        }
+        document.addEventListener("deviceready", when_deviceready, false);
+
+        function home_page() {
         alert("home page");
     }
     </script>
