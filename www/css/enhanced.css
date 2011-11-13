@@ -10,6 +10,32 @@
     right:40px;top:0;
     padding:10px 5px;
     font-size: .85em;
+
+    color: white;
+}
+#side .projects > h1 {
+  padding-top: 20px;
+  font-size: 1.2em;
+  text-align: right;
+  color: #AAA;
+}
+#side .projects dl {
+    border: 1px solid #999;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.2);
+    text-align: right;
+    padding: 5px;
+
+}
+#side .projects ul {
+  padding-bottom: 5px;
+}
+#side .projects li {
+  padding: 2px 0;
+  text-align: right;
+}
+#side .projects ul a {
+    color: #AAA;
 }
 #side .projects input {
   background-color:#777;

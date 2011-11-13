@@ -47,6 +47,19 @@
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+    font-family: 'InconsolataMedium';
+    src: url('/fonts/Inconsolata-fontfacekit/Inconsolata-webfont.eot');
+    src: url('/fonts/Inconsolata-fontfacekit/Inconsolata-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Inconsolata-fontfacekit/Inconsolata-webfont.woff') format('woff'),
+         url('/fonts/Inconsolata-fontfacekit/Inconsolata-webfont.ttf') format('truetype'),
+         url('/fonts/Inconsolata-fontfacekit/Inconsolata-webfont.svg#InconsolataMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 /*"#{$skin}/font-faces.scss";*/
 /**
  * HTML5 ✰ Boilerplate
@@ -77,7 +90,11 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font-family: NewCicleFina, Geneva, Helvetica, "Helvetica Neue", "Gill Sans", sans-serif;
+  font-family: InconsolataMedium, Monaco,
+             "Bitstream Vera Sans Mono",
+             "Lucida Console",
+             Terminal,
+             monospace;
   vertical-align: baseline; }
 
 article, aside, details, figcaption, figure,
@@ -358,5 +375,10 @@ nav.in-lower-area header,
 
 /*"#{$skin}/basics.scss";*/
 .in-main-area-header {
-  color: #aaa; }
+  color: #aaa; 
+}
+
+#side {
+    background-color: rgba(0,0,0,.1);
+}
 
