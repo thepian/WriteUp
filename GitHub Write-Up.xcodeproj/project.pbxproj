@@ -39,6 +39,8 @@
 		CFB9DE121455F71400BAE951 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB9DE111455F71400BAE951 /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CFB9DE251455FDC100BAE951 /* www in Resources */ = {isa = PBXBuildFile; fileRef = CFB9DE241455FDC100BAE951 /* www */; };
 		CFB9DE4D145616BB00BAE951 /* ObjectiveGit in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB9DE461456167C00BAE951 /* ObjectiveGit */; };
+		CFBB7B17146FED05005E21DA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CFBB7B16146FED05005E21DA /* Default.png */; };
+		CFBB7B19146FED0C005E21DA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFBB7B18146FED0C005E21DA /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,9 +125,9 @@
 		CFB9DE111455F71400BAE951 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
 		CFB9DE141455F71400BAE951 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		CFB9DE241455FDC100BAE951 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
-		CFB9DE271456118600BAE951 /* Rough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rough.png; path = Resources/splash/Rough.png; sourceTree = "<group>"; };
 		CFB9DE321456167B00BAE951 /* ObjectiveGitFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjectiveGitFramework.xcodeproj; path = "../objective-git/ObjectiveGitFramework.xcodeproj"; sourceTree = "<group>"; };
-		CFB9DE4E1457311E00BAE951 /* iPadDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadDefault.png; path = Resources/splash/iPadDefault.png; sourceTree = "<group>"; };
+		CFBB7B16146FED05005E21DA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		CFBB7B18146FED0C005E21DA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,8 @@
 		CFB9DDBF1455F71300BAE951 = {
 			isa = PBXGroup;
 			children = (
+				CFBB7B18146FED0C005E21DA /* Default@2x.png */,
+				CFBB7B16146FED05005E21DA /* Default.png */,
 				CFAB65EA145D94360060D387 /* Default-Landscape~ipad.png */,
 				CFAB65E6145D940F0060D387 /* Default-Landscape.png */,
 				CFAB65E7145D940F0060D387 /* Default-Portrait.png */,
@@ -269,8 +273,6 @@
 		CFB9DE061455F71400BAE951 /* splash */ = {
 			isa = PBXGroup;
 			children = (
-				CFB9DE4E1457311E00BAE951 /* iPadDefault.png */,
-				CFB9DE271456118600BAE951 /* Rough.png */,
 				CFB9DE071455F71400BAE951 /* Default.png */,
 				CFB9DE091455F71400BAE951 /* Default@2x.png */,
 			);
@@ -427,6 +429,8 @@
 				CFB9DE0C1455F71400BAE951 /* Capture.bundle in Resources */,
 				CFB9DE0E1455F71400BAE951 /* PhoneGap.plist in Resources */,
 				CFB9DE251455FDC100BAE951 /* www in Resources */,
+				CFBB7B17146FED05005E21DA /* Default.png in Resources */,
+				CFBB7B19146FED0C005E21DA /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,8 +519,9 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -533,8 +538,9 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
