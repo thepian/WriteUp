@@ -25,6 +25,7 @@
     background-color: rgba(255,255,255,0.2);
     text-align: right;
     padding: 5px;
+    margin-top: 10px;
 
 }
 #side .projects ul {
@@ -48,8 +49,14 @@
 }
 #side .buttons {
     position:absolute;
-    right:0; width:35px;
-    top:0; bottom:0;
+    right:-41px; width:35px;
+
+    top: 5px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 0 8px 8px 0;
+    padding: 5px 3px;
+
 }
 #side .buttons object {
   width:31px; height:31px;
@@ -80,13 +87,24 @@
 
 #doc-text {
     position:absolute;
-    margin-left:60%;
-    left:40px; right:0;
+    /*margin-left:60%;*/
+    /*left:40px; */
+    right:0;
     top:90px; bottom:0;
 }
 
+#doc-text .buttons {
+    position:absolute;
+    left:-41px; width:35px;
+    top:25px; height:120px;
+
+background-color: rgba(0, 0, 0, .2);
+border-radius: 8px 0 0 8px;
+padding: 5px 3px;
+}
+
 body.initial .initially-hidden {
-  visibility:hidden;
+  margin-left:100%;
 }
 body.initial #side {
   left:0;

@@ -67,3 +67,37 @@ div#logo {
     font-family: Baskerville;
 
 }
+
+
+#signin {
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin: 60px 0 0 -90px;
+    width:180px;
+    height:120px;
+    overflow:visible;
+
+    border:1px solid #aaa;
+    border-radius: 10px;
+    background-color: rgba(200,200,200,0.2);
+    font-size: 0.7em;
+    text-align: center;
+    padding-top: 4px;
+    color: #ddd;
+}
+
+#signin input {
+    display:block;
+    width: 150px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-size: 1.2em;
+}
+#signin button {
+    display:block;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
