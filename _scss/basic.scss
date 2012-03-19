@@ -1,0 +1,400 @@
+/*
+Basic CSS
+
+"Basic" = safe defaults
+
+• Tweaks to browser typography
+• Horizontal rules
+• Text alignment
+• Display: Inline / Block
+• No complex layout or positioning
+￼
+*/
+@import "essential/essential";
+
+@font-face {
+  font-family: 'MuseoSans500';
+  src: url("/fonts/museosans_500_macroman/MuseoSans_500-webfont.eot");
+  src: url("/fonts/museosans_500_macroman/MuseoSans_500-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/museosans_500_macroman/MuseoSans_500-webfont.woff") format("woff"), url("/fonts/museosans_500_macroman/MuseoSans_500-webfont.ttf") format("truetype"), url("/fonts/museosans_500_macroman/MuseoSans_500-webfont.svg#MuseoSans500") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NewCicleFina';
+  src: url("/fonts/New-Cicle-fontfacekit/New_Cicle_Fina-webfont.eot");
+  src: url("/fonts/New-Cicle-fontfacekit/New_Cicle_Fina-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/New-Cicle-fontfacekit/New_Cicle_Fina-webfont.woff") format("woff"), url("/fonts/New-Cicle-fontfacekit/New_Cicle_Fina-webfont.ttf") format("truetype"), url("/fonts/New-Cicle-fontfacekit/New_Cicle_Fina-webfont.svg#NewCicleFina") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NewCicleFinaItalic';
+  src: url("/fonts/New-Cicle-fontfacekit/New_Cicle_Fina_Italic-webfont.eot");
+  src: url("/fonts/New-Cicle-fontfacekit/New_Cicle_Fina_Italic-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/New-Cicle-fontfacekit/New_Cicle_Fina_Italic-webfont.woff") format("woff"), url("/fonts/New-Cicle-fontfacekit/New_Cicle_Fina_Italic-webfont.ttf") format("truetype"), url("/fonts/New-Cicle-fontfacekit/New_Cicle_Fina_Italic-webfont.svg#NewCicleFinaItalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NewCicleSemi';
+  src: url("/fonts/New-Cicle-fontfacekit/New_Cicle_Semi-webfont.eot");
+  src: url("/fonts/New-Cicle-fontfacekit/New_Cicle_Semi-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/New-Cicle-fontfacekit/New_Cicle_Semi-webfont.woff") format("woff"), url("/fonts/New-Cicle-fontfacekit/New_Cicle_Semi-webfont.ttf") format("truetype"), url("/fonts/New-Cicle-fontfacekit/New_Cicle_Semi-webfont.svg#NewCicleSemi") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NewCicleSemiItalic';
+  src: url("/fonts/New-Cicle-fontfacekit/New_Cicle_Semi_Italic-webfont.eot");
+  src: url("/fonts/New-Cicle-fontfacekit/New_Cicle_Semi_Italic-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/New-Cicle-fontfacekit/New_Cicle_Semi_Italic-webfont.woff") format("woff"), url("/fonts/New-Cicle-fontfacekit/New_Cicle_Semi_Italic-webfont.ttf") format("truetype"), url("/fonts/New-Cicle-fontfacekit/New_Cicle_Semi_Italic-webfont.svg#NewCicleSemiItalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NewCicleGordita';
+  src: url("/fonts/New-Cicle-fontfacekit/New_Cicle_Gordita-webfont.eot");
+  src: url("/fonts/New-Cicle-fontfacekit/New_Cicle_Gordita-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/New-Cicle-fontfacekit/New_Cicle_Gordita-webfont.woff") format("woff"), url("/fonts/New-Cicle-fontfacekit/New_Cicle_Gordita-webfont.ttf") format("truetype"), url("/fonts/New-Cicle-fontfacekit/New_Cicle_Gordita-webfont.svg#NewCicleGordita") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NewCicleGorditaItalic';
+  src: url("/fonts/New-Cicle-fontfacekit/New_Cicle_Gordita_Italic-webfont.eot");
+  src: url("/fonts/New-Cicle-fontfacekit/New_Cicle_Gordita_Italic-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/New-Cicle-fontfacekit/New_Cicle_Gordita_Italic-webfont.woff") format("woff"), url("/fonts/New-Cicle-fontfacekit/New_Cicle_Gordita_Italic-webfont.ttf") format("truetype"), url("/fonts/New-Cicle-fontfacekit/New_Cicle_Gordita_Italic-webfont.svg#NewCicleGorditaItalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+    font-family: 'InconsolataMedium';
+    src: url('/fonts/Inconsolata-fontfacekit/Inconsolata-webfont.eot');
+    src: url('/fonts/Inconsolata-fontfacekit/Inconsolata-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Inconsolata-fontfacekit/Inconsolata-webfont.woff') format('woff'),
+         url('/fonts/Inconsolata-fontfacekit/Inconsolata-webfont.ttf') format('truetype'),
+         url('/fonts/Inconsolata-fontfacekit/Inconsolata-webfont.svg#InconsolataMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@include global-reset;
+
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	//font-family: LinuxLibertineORegular, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;	
+	font-family: Optima-Regular, TrebuchetMS, sans-serif;
+} 
+body {
+	color: white;
+}
+
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+input, select { vertical-align: middle; }
+
+/* Mobile phones will adjust text size when the screen orientation changes unless you include a special CSS parameter */
+html {
+    -webkit-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+}
+
+.clearfix { @include clearfix; }
+
+/* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"] {
+  vertical-align: text-bottom; }
+
+input[type="checkbox"] {
+  vertical-align: bottom; }
+
+.iem7 input[type="checkbox"] {
+  vertical-align: baseline; }
+
+/* Hand cursor on clickable input elements */
+label, input[type="button"], input[type="submit"], input[type="image"], button {
+  cursor: pointer; }
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+  margin: 0; }
+
+/* Colors for form validity */
+input:invalid, textarea:invalid {
+  border-radius: 1px;
+  -moz-box-shadow: 0px 0px 5px red;
+  -webkit-box-shadow: 0px 0px 5px red;
+  box-shadow: 0px 0px 5px red; }
+
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid {
+  background-color: #f0dddd; }
+
+/* These selection declarations have to be separate
+   No text-shadow: twitter.com/miketaylr/status/12228805301
+   Also: hot pink! */
+::-moz-selection {
+  background: #FF5E99;
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background: #FF5E99;
+  color: #fff;
+  text-shadow: none; }
+
+/* j.mp/webkit-tap-highlight-color */
+a:link {
+  -webkit-tap-highlight-color: #FF5E99; }
+
+/* Make buttons play nice in IE:
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button {
+  width: auto;
+  overflow: visible; }
+
+/* Bicubic resizing for non-native sized IMG:
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.iem7 img {
+  -ms-interpolation-mode: bicubic; }
+
+/* 
+ * Helper classes 
+ */
+/* prevent callout */
+.nocallout {
+  -webkit-touch-callout: none; }
+
+/* Text overflow with ellipsis */
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+textarea.contenteditable {
+  -webkit-appearance: none; }
+
+/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if they have been set as display: none */
+.gifhidden {
+  position: absolute;
+  left: -100%; }
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+/* http://sonspring.com/journal/clearing-floats */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+/* http://perishablepress.com/press/2009/12/06/new-clearfix-hack */
+.clearfix:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+/*
+	The following zoom:1 rule is specifically for IE6 + IE7.
+	Move to separate stylesheet if invalid CSS is a problem.
+*/
+* html .clearfix,
+*:first-child + html .clearfix {
+  zoom: 1; }
+
+.content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  overflow: hidden; }
+  .livepage .content {
+    top: 43px; }
+
+.tracker {
+  position: absolute;
+  visibility: hidden; }
+
+section .section-content,
+section .backdrop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+
+section .panel {
+  position: absolute; }
+  section .panel .panel-content {
+    position: relative;
+    overflow: hidden; }
+
+section .panel-closed .panel-content {
+  height: 0;
+  max-height: 0; }
+
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
+
+/* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
+h1, h2 {
+  font-weight: lighter; 
+	line-height: 1.5;
+	font-size: 1.2em;
+	margin-bottom: 5px;
+}
+
+h3, h4, h5, h6 {
+  font-weight: bold; }
+
+a, a:active, a:visited {
+  color: #607890; }
+
+a:hover {
+  color: #036; }
+
+nav.in-upper-area h1, nav.in-upper-area h2, nav.in-upper-area header,
+.in-upper-area-member h1,
+.in-upper-area-member h2,
+.in-upper-area-member header,
+nav.in-lower-area h1,
+nav.in-lower-area h2,
+nav.in-lower-area header,
+.in-lower-area-member h1,
+.in-lower-area-member h2,
+.in-lower-area-member header {
+  color: white; }
+
+/*"#{$skin}/basics.scss";*/
+.in-main-area-header {
+  color: #aaa; 
+}
+
+#side {
+    background-color: rgba(0,0,0,.2);
+}
+
+html {
+    background-image: url(../images/fabricTexture.jpg);
+    height: 100%;
+    overflow:hidden;
+}
+body {
+    /*
+    background-image: url(../images/fabricTexture.jpg);
+    */
+    height: 100%;
+    overflow:hidden;
+    
+    /* Chrome,Safari4+ */
+    /*
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.75)), color-stop(40%,rgba(0,0,0,0.5)), color-stop(60%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,0.75))); 
+    */
+    /* Chrome10+,Safari5.1+ */
+    /*
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.5) 40%,rgba(0,0,0,0.5) 60%,rgba(0,0,0,0.75) 100%); 
+    */
+    /* W3C */
+    /*
+    background: linear-gradient(left, rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.5) 40%,rgba(0,0,0,0.5) 60%,rgba(0,0,0,0.75) 100%); 
+    */
+}
+
+#logo {
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin: -100px 0 0 -100px;
+    width:200px;
+    height:200px;
+    overflow:visible;
+}
+div#logo {
+    
+    background-image: url(../images/quill.png);
+    background-repeat: no-repeat;
+    background-position-x: 42px;
+    background-position-y: -4px;
+    
+}
+#logo h1 {
+    font-family: Baskerville;
+    font-size: 50px;
+    color: #aaa;
+    text-shadow: 1px 1px white, -1px -1px #444;
+}
+#logo h2 {
+    font-family: Baskerville;
+    font-size: 18px;
+    color: #aaa;
+    text-shadow: 1px 1px white, -1px -1px #444;
+    padding-left: 95px;
+    margin-top: -2px;
+}
+
+#logo input[type=search] {
+    border-radius: 12px;
+}
+
+#logo ul {
+    margin-left: -10px;
+}
+#logo ul a {
+    font-family: Baskerville;
+
+}
+
+
+#signin {
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin: 60px 0 0 -90px;
+    width:180px;
+    height:120px;
+    overflow:visible;
+
+    border:1px solid #aaa;
+    border-radius: 10px;
+    background-color: rgba(200,200,200,0.2);
+    font-size: 0.7em;
+    text-align: center;
+    padding-top: 4px;
+    color: #ddd;
+}
+
+#signin input {
+    display:block;
+    width: 150px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-size: 1.2em;
+}
+#signin button {
+    display:block;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+

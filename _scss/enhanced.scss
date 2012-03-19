@@ -1,0 +1,158 @@
+---
+appcache: default
+---
+@import "essential/essential";
+
+body { height:100%; }
+
+body, .main {
+	overflow:hidden;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+#side {
+    position:absolute;
+    left:-170px; width:210px;
+    top:0;bottom:0;
+    z-index: 10;
+}
+
+#side .projects {
+    position:absolute;
+    left: 10px; right:10px; top:0;
+    padding:10px 0px;
+    font-size: .85em;
+
+    color: white;
+}
+
+#side .accounts {
+    position:absolute;
+    left:10px; right:10px; bottom:0;
+    font-size: .85em;
+
+    color: white;
+}
+
+#side .accounts > h1,
+#side .projects > h1 {
+  padding-top: 20px;
+  font-size: 1.2em;
+  text-align: right;
+  color: #AAA;
+}
+#side .accounts dl,
+#side .projects dl {
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.05);
+    text-align: right;
+    padding: 5px;
+    margin-top: 10px;
+
+}
+#side .accounts ul,
+#side .projects ul {
+  padding-bottom: 5px;
+}
+#side .accounts li,
+#side .projects li {
+  padding: 2px 8px;
+  text-align: right;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+	margin: 5px 0;
+}
+#side .accounts ul a,
+#side .projects ul a {
+    color: #AAA;
+}
+#side .accounts input,
+#side .projects input {
+  background-color:#777;
+  color:white;
+  border:1px solid #aaa;
+  border-radius: 11px;
+  font-size: 13px;
+  padding: 2px 4px;
+
+}
+#side .buttons {
+    position:absolute;
+    right:-41px; width:35px;
+
+    top: 5px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 0 8px 8px 0;
+    padding: 5px 3px;
+
+}
+#side .buttons object {
+  width:31px; height:31px;
+  margin:2px;
+}
+
+#doc-title {
+    position:absolute;
+    left:140px; right:0;
+    top:0; height:30px;
+    
+}
+#doc-title input[type=search] {
+    width:80%;
+    font-size:16px;
+    padding:2px;
+    background-color:#aaa;
+}
+
+
+#doc-info {
+    position:absolute;
+    margin-left:60%;
+    left:40px; right:0;
+    top:30px; height:60px;
+    
+}
+
+#doc-text {
+    position:absolute;
+    /*margin-left:60%;*/
+    /*left:40px; */
+    right:0;
+    top:90px; bottom:0;
+}
+
+#doc-text .buttons {
+    position:absolute;
+    left:-41px; width:35px;
+    top:25px; height:120px;
+
+background-color: rgba(0, 0, 0, .2);
+border-radius: 8px 0 0 8px;
+padding: 5px 3px;
+}
+
+body.initial .initially-hidden {
+  margin-left:100%;
+}
+body.initial #side {
+  left:0;
+}
+
+body > .content {
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; 
+}
+
+
+
+@media all and (min-width: 500px){ .. }
+@media all and (min-width: 620px){ .. }
+@media all and (min-width: 950px){ .. }

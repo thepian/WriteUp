@@ -1,0 +1,81 @@
+@mixin centerDialog($width,$height,$padding: 20px) {
+	position:absolute;
+	left:50%;
+	top:50%;
+	width: $width;
+	height: $height;
+	margin:0 auto;
+	margin-top: -$height/2 - $padding;
+	margin-left: -$width/2 - $padding;
+	padding: $padding;
+
+	z-index: 25;
+}
+
+@mixin centerBottomDialog($width,$height,$padding: 20px,$vert-offset:0px) {
+	position:absolute;
+	left:50%;
+	top:100%;
+	width: $width;
+	height: $height;
+	margin:0 auto;
+	margin-top: -$height/2 - $padding - $vert-offset;
+	margin-left: -$width/2 - $padding;
+	padding: $padding;
+
+	z-index: 25;
+}
+
+@mixin colorDialog($from_color: #004892, $to_color: rgba(0, 53, 110, .2), $to_stop: 50%, $border: none) {
+
+	//$to_color: #023;
+	//$to_color: #0266b2;
+	//$to_color: rgba(0, 60, 122, .5);
+	
+	color:#fff;
+	border: $border;
+	//border:1px solid #122061;
+
+	background: $from_color; /* Old browsers */
+	background: -moz-linear-gradient(top,  $from_color 0%, $to_color $to_stop); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$from_color), color-stop($to_stop,$to_color)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  $from_color 0%,$to_color $to_stop); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  $from_color 0%,$to_color $to_stop); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  $from_color 0%,$to_color $to_stop); /* IE10+ */
+	background: linear-gradient(top,  $from_color 0%,$to_color $to_stop); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from_color', endColorstr='$to_color',GradientType=0 ); /* IE6-9 */
+	
+	/*
+	-webkit-box-shadow: -3px 4px 5px rgba(50, 50, 50, 0.40);
+	-moz-box-shadow:    -3px 4px 5px rgba(50, 50, 50, 0.40);
+	box-shadow:         -3px 4px 5px rgba(50, 50, 50, 0.40);
+	*/
+}
+
+@mixin colorRoundedButton() {
+	
+	/* http://css3button.net/16696 */
+	font-size: 16px;
+	color: #ffffff;
+	padding: 4px 7px;
+	background: -moz-linear-gradient(
+		top,
+		#fe4040 0%,
+		#b60000);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#fe4040),
+		to(#b60000));
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 0px solid #e70000;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 2px rgba(255,255,255,0);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 2px rgba(255,255,255,0);
+	text-shadow:
+		1px -1px -1px rgba(0, 0, 0, .5);
+}
