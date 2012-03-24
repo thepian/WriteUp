@@ -91,6 +91,8 @@ published: no
         return false;
     }
     function form_submit() {
+        if (document.activeElement) document.activeElement.blur();
+        this.blur();
         var submitName = "trigger";
         for(var i=0,e; e=this.elements[i]; ++i) {
             if (e.type=="submit") submitName = e.name;
@@ -98,6 +100,17 @@ published: no
         var action = this.action? this.action.replace(baseUrl,"") : "submit";
         var actionVariant = DialogAction.variant(action)(action);
         if (actionVariant[submitName]) actionVariant[submitName](this);
+    }
+    function form_blur() {
+        for(var i=0,e; e=this.elements[i]; ++i) e.blur();
+    }
+    function form_focus() {
+        for(var i=0,e; e=this.elements[i]; ++i) {
+            var autofocus = e.getAttribute("autofocus");
+            if (autofocus == undefined) continue;
+            e.focus();
+            break; 
+        }
     }
 
 	DocumentRoles.enhance_dialog = function (el) {
@@ -107,6 +120,10 @@ published: no
                 el.onsubmit = form_onsubmit;
                 el.__builtinSubmit = f.submit;
                 el.submit = form_submit;
+                el.__builtinBlur = f.blur;
+                el.blur = form_blur;
+                el.__builtinFocus = f.focus;
+                el.focus = form_focus;
 	            break;
 	        case "default":
 	            //TODO capture enter from inputs, tweak tab indexes
