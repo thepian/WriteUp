@@ -18,7 +18,8 @@ end
 
 desc 'Install Server Dependencies'
 task :dependencies do
-  sh '_server/bin/pip install BeautifulSoup'
+  sh '_server/bin/pip install BeautifulSoup4'
+  sh '_server/bin/pip install html5lib'
   sh '_server/bin/pip install markdown2'
   sh '_server/bin/pip install pyScss'
   sh '_server/bin/pip install git+git://github.com/ingydotnet/pyyaml-mirror.git#egg=PyYAML'
