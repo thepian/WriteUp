@@ -11,3 +11,7 @@ exclude:
 - Rakefile
 - README
 - testing.log
+- distribute-0.6.21.tar.gz
+- testing.log
+- GitHub Write-Up
+
