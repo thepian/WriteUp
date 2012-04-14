@@ -32,9 +32,9 @@ function Resolver(name,ns,options)
 	options = ns || {};
 	ns = name;
 	name = options.name;
-	var _generator = options.generator || Generator(Object); //TODO faster default
 
 	function _resolve(names,onundefined) {
+		var _generator = options.generator || Generator(Object); //TODO faster default
         var top = ns;
         for (var j = 0, n; n = names[j]; ++j) {
             var prev_top = top;
@@ -58,7 +58,7 @@ function Resolver(name,ns,options)
     function _setValue(value,names,base,symbol)
     {
     	base[symbol] = value;
-		if (value.__generator__ == value) {
+		if (typeof value == "object" && value.__generator__ == value) {
     		value.info.symbol = symbol;
     		value.info["package"] = names.join(".");
     		value.info.within = base;
@@ -148,6 +148,13 @@ function Resolver(name,ns,options)
 		Resolver[name].named = name;
 		return Resolver[name];
     };
+
+    if (options.mixinto) {
+    	options.mixinto.declare = resolve.declare;
+    	options.mixinto.set = resolve.set;
+    	options.mixinto.reference = resolve.reference;
+    	options.mixinto.override = resolve.override;
+    }
 
     return resolve;
 }
@@ -354,10 +361,14 @@ function Generator(mainConstr,options)
 		return generator;
 	})(arguments);
 
+	Resolver(generator.prototype,{ mixinto:generator });
+
+	/*
 	function mixin(mix) {
 		for(var n in mix) this.prototype[n] = mix[n];
 	}
 	generator.mixin = mixin;
+	*/
 	
 	function variant(name,variantConstr,v1,v2,v3,v4) {
 		if (variantConstr == undefined) { // Lookup the variant generator
