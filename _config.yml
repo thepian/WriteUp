@@ -13,5 +13,7 @@ exclude:
 - testing.log
 - distribute-0.6.21.tar.gz
 - testing.log
+- GitHub Write-Up.xcodeproj
 - GitHub Write-Up
+- www
 
