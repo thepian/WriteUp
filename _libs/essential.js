@@ -89,6 +89,7 @@ function Resolver(name,ns,options)
     	if (base[symbol] === undefined) { 
     		_setValue(value,names,base,symbol);
     	}
+    	return _resolve(names,onundefined)
     };
 
     resolve.set = function(name,value,onundefined) 
@@ -97,6 +98,7 @@ function Resolver(name,ns,options)
         var symbol = names.pop();
     	var base = _resolve(names,onundefined);
 		_setValue(value,names,base,symbol);
+		return value;
     };
 
     resolve.reference = function(name,onundefined)
@@ -112,12 +114,14 @@ function Resolver(name,ns,options)
         	var base = _resolve(names,onundefined);
         	names.push(symbol);
         	_setValue(value,names,base,symbol);
+        	return value;
         }
         function declare(value) {
             var symbol = names.pop();
         	var base = _resolve(names,onundefined);
         	names.push(symbol);
         	if (base[symbol] === undefined) _setValue(value,names,base,symbol);
+        	return _resolve(names,onundefined);
         }
         function mixin(map) {
             var symbol = names.pop();
