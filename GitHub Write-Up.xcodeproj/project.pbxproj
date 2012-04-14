@@ -332,7 +332,7 @@
 		CFB9DDC11455F71300BAE951 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = CFB9DDC41455F71300BAE951 /* Build configuration list for PBXProject "GitHub Write-Up" */;
 			compatibilityVersion = "Xcode 3.2";
