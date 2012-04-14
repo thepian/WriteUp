@@ -27,11 +27,9 @@ HTMLImplementation.prototype.makeControlImplementation = function(eClone,eForm,m
 {
 	var oImplementation = this;
 
-	var sRenderer = eClone.getAttribute("data-renderer");
-	
 	var oData = eClone.data;
 	if (oData) {
-		oImplementation = oData.fireLifecycleTrigger("implementation","init",eForm,eClone,oImplementation,sRenderer) || oImplementation;
+		oImplementation = oData.fireLifecycleTrigger("implementation","init",eForm,eClone,oImplementation) || oImplementation;
 	}
 	oImplementation.decorate(eClone,eForm,mNames);
 	//TODO call undecorate when branch torn down
@@ -413,12 +411,6 @@ HTMLImplementation.get = function(eControl)
 	}
 
 	var sImplementation = eControl.getAttribute("implementation");
-	if (sImplementation == null) {
-		var sRenderer = eControl.getAttribute("data-renderer");
-		if (typeof sRenderer == "string") {
-			sImplementation = "caplin.dom.implementations.RendererImplementation";
-		}
-	}
 	if (sImplementation) {
 		var sIndex = "class:"+sImplementation;
 		if (this.CACHE[sIndex]) return this.CACHE[sIndex];
@@ -436,28 +428,6 @@ HTMLImplementation.get = function(eControl)
 	return oImplementation;
 };
 
-
-HTMLImplementation.prototype.getRendererImplementation = function()
-{
-	var sType = eControl.getAttribute("type");
-	var sDefaultIndex = sType? eControl.tagName.toLowerCase() + " " + sType : eControl.tagName.toLowerCase(); 
-	if (this.CACHE[sDefaultIndex] == undefined) {
-		var mMods = this.MODS[sDefaultIndex] || this.MODS['span'];
-		this.CACHE[sDefaultIndex] = new HTMLImplementation(mMods);
-	}
-	var sImplementation = "caplin.dom.implementations.RendererImplementation";
-	
-	var sIndex = "class:"+sImplementation;
-	if (this.CACHE[sIndex]) return this.CACHE[sIndex];
-	try {
-		var fConstructor = eval(sImplementation);
-		var mMods = this.MODS[sDefaultIndex] || this.MODS['span'];
-		var oImplementation = this.CACHE[sIndex] = new fConstructor(mMods,eControl);
-		return oImplementation;
-	} catch(ex) {
-		// TODO warn?
-	}
-};
 
 
 /**
