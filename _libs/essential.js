@@ -180,6 +180,7 @@ function Generator(mainConstr,options)
 
 	var info = {
 		arguments: {},
+		presets: {}, // presets to copy before constructors
 		options: options,
 		constructors: []
 	};
@@ -255,7 +256,11 @@ function Generator(mainConstr,options)
 		//TODO support args default values in all cases
 	}
 
-	function presetMembers() {
+	function presetMembersInfo() {
+		for(var n in info.presets) this[n] = info.presets[n];
+	}
+
+	function presetMembersArgs() {
 		var args = this.__context__.generator.args;
 		for(var i=0,a; a = args[i]; ++i) if (a.preset) {
 			this[a.preset] = arguments[i];
@@ -335,8 +340,14 @@ function Generator(mainConstr,options)
 			info.arguments[a.name] = a;
 			if (a.preset) argsPreset = true;
 		}
+		/* 
+		TODO only add this when presets are set
+		TODO collapse base classes
+		*/
+		info.constructors.unshift(presetMembersInfo);
+
 		if (argsPreset) {
-			info.constructors.unshift(presetMembers)
+			info.constructors.unshift(presetMembersArgs)
 		}
 
 		// If we have base classes, make prototype based on their type
@@ -369,6 +380,10 @@ function Generator(mainConstr,options)
 	}
 	generator.mixin = mixin;
 	*/
+
+	//TODO callback when preset entry defined first time
+	generator.presets = Resolver(info.presets);
+
 	
 	function variant(name,variantConstr,v1,v2,v3,v4) {
 		if (variantConstr == undefined) { // Lookup the variant generator
