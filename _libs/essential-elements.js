@@ -3,6 +3,7 @@ published: no
 ---
 (function(){
 	var essential = Resolver("essential",{});
+	var ObjectType = essential("ObjectType");
 
 	// this = element
 	function regScriptOnload(domscript,trigger) {
@@ -56,24 +57,27 @@ published: no
 	essential.set("DialogAction",Generator(DialogAction));
 	
 	function DocumentRoles(handlers) {
-	    this.handlers = handlers;
+	    this.handlers = handlers || this.handlers || {};
+	    //TODO configure reference as DI arg
+	    var statefuls = ApplicationConfigGenerator(); // Ensure that config is present
+
 	    if (document.querySelectorAll) {
 	        var with_roles = document.querySelectorAll("*[role]");
 	        for(var i=0,e; e=with_roles[i]; ++i) {
 	            var role = e.getAttribute("role");
-	            (handlers[role] || this.enhance).call(e,role);
+	            (this.handlers[role] || this.default_enhance).call(this,e,role,statefuls.getConfig(e));
 	        }
 	    } else {
 	        var with_roles = document.getElementsByTagName("*");
 	        for(var i=0,e; e=with_roles[i]; ++i) {
 	            var role = e.getAttribute("role");
 	            if (role) {
-    	            (handlers[role] || this.default_enhance).call(e,role);
+    	            (this.handlers[role] || this.default_enhance).call(this,e,role,statefuls.getConfig(e));
 	            }
 	        }
 	    }
 	}
-	essential.set("DocumentRoles",Generator(DocumentRoles));
+	var DocumentRolesGenerator = essential.set("DocumentRoles",Generator(DocumentRoles));
 	
 	DocumentRoles.args = [
 	    ObjectType({ name:"handlers" })
@@ -113,7 +117,7 @@ published: no
         }
     }
 
-	DocumentRoles.enhance_dialog = function (el) {
+	DocumentRolesGenerator.enhance_dialog = DocumentRoles.enhance_dialog = function (el,role,config) {
 	    switch(el.tagName.toLowerCase()) {
 	        case "form":
                 // f.method=null; f.action=null;
@@ -125,15 +129,56 @@ published: no
                 el.__builtinFocus = f.focus;
                 el.focus = form_focus;
 	            break;
-	        case "default":
+	            
+	        default:
+	        	debugger;
 	            //TODO capture enter from inputs, tweak tab indexes
 	            break;
 	    }
 	    
     };
     
-    DocumentRoles.enhance_sheet = function(el) {
+    DocumentRolesGenerator.enhance_sheet = DocumentRoles.enhance_sheet = function(el,role,config) {
         
     };
+
+    DocumentRoles.default_enhance = function(el,role,config) {
+        
+    };
+
+    function ApplicationConfig() {
+    	this.config = {};
+    	this.configure_document();
+    }
+    var ApplicationConfigGenerator = Generator(ApplicationConfig);
+    essential.set("ApplicationConfig",ApplicationConfigGenerator).restrict({ "singleton":true, "lifecycle":"page" });
+
+    ApplicationConfig.prototype.declare = function(key,value) {
+    	this.config[key] = value;
+    	// console.log(key, value);
+    };
+    ApplicationConfig.prototype.configure_document = function() {
+    	var scripts = document.getElementsByTagName("script");
+    	for(var i=0,s; s = scripts[i]; ++i) {
+    		if (s.getAttribute("type") == "application/config") {
+    			with(this) eval(s.text);
+    		}
+    	}
+    };
+
+    ApplicationConfig.prototype.getConfig = function(element) {
+    	if (element.id) {
+    		return this.config[element.id] || {};
+    	}
+    	var name = element.getAttribute("name");
+    	if (name) {
+    		var p = element.parentNode;
+    		while(p) {
+	    		if (p.id) return this.config[p.id + "." + name];
+	    		p = p.parentNode;
+    		} 
+    	}
+    	return {};
+    }
     
 })();
