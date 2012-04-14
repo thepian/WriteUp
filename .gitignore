@@ -1,3 +1,4 @@
-distribute-0.6.21.tar.gz
-_server/
+.DS_Store
 testing.log
+_server/
+distribute-0.6.21.tar.gz
