@@ -188,6 +188,18 @@ textarea.contenteditable {
   position: absolute;
   left: -100%; }
 
+@mixin button-styling($border-color) {
+  background: transparent;
+  border-radius: 10px;
+  //TODO font/size
+  line-height: 1.5em;
+  border: 1px solid $border-color;
+  color: $border-color;
+}
+button {
+  @include button-styling(rgba(255,255,255, .8));
+}
+
 .content {
   position: absolute;
   left: 0;
