@@ -3,6 +3,8 @@ appcache: default
 ---
 @import "essential/essential";
 
+$side-width: 200px;
+
 body { height:100%; }
 
 body, .main {
@@ -19,11 +21,12 @@ body, .main {
     left:-170px; width:210px;
     top:0;bottom:0;
     z-index: 10;
+  margin-left:100%;
 }
 
 #side .projects {
     position:absolute;
-    left: 10px; right:10px; top:0;
+    left: 4px; right:4px; top:0;
     padding:10px 0px;
     font-size: .85em;
 
@@ -99,15 +102,17 @@ body, .main {
 
 #doc-title {
     position:absolute;
-    left:140px; right:0;
+    left:$side-width; right:0;
     top:0; height:30px;
     
-}
-#doc-title input[type=search] {
-    width:80%;
-    font-size:16px;
-    padding:2px;
-    background-color:#aaa;
+  input[type=search] {
+      width:80%;
+      font-size:16px;
+      padding:2px;
+      background-color:#aaa;
+      margin-top: 5px;
+      -webkit-appearance: textfield;
+  }
 }
 
 
