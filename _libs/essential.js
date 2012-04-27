@@ -13,7 +13,7 @@ function Resolver(name,ns,options)
 	switch(typeof(name)) {
 	case "undefined":
 		// Resolver()
-		return Resolver.default;
+		return Resolver["default"];
 		
 	case "string":
 		// Resolver("abc")
@@ -160,7 +160,7 @@ function Resolver(name,ns,options)
 
     return resolve;
 }
-Resolver.default = Resolver({},{ name:"default" });
+Resolver["default"] = Resolver({},{ name:"default" });
 
 Resolver.hasGenerator = function(subject) {
 	if (subject.__generator__) return true;
@@ -251,7 +251,7 @@ function Generator(mainConstr,options)
 		var passedArgs = this.__context__.args;
 		for(var i=0,argDef; argDef = generator.args[i]; ++i) if (passedArgs[i] === undefined) {
 			 var argName = generator.args[i].name;
-			 var argDefault = generator.args[i].default;
+			 var argDefault = generator.args[i]["default"];
 			 if (argName in info.restrictedArgs) passedArgs[i] = info.restrictedArgs[argName];
 			 else if (argDefault) passedArgs[i] = argDefault;
 		}
