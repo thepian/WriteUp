@@ -11,6 +11,7 @@ Basic CSS
 ￼
 */
 @import "essential/essential";
+@import "compass/stylesheets/compass/css3";
 
 @font-face {
   font-family: 'MuseoSans500';
@@ -303,13 +304,39 @@ body {
 }
 
 #logo {
-    position: absolute;
-    left:50%;
-    top:50%;
-    margin: -100px 0 0 -100px;
-    width:200px;
-    height:200px;
-    overflow:visible;
+  position: absolute;
+  left:50%;
+  top:50%;
+  margin: -100px 0 0 -100px;
+  width:200px;
+  height:200px;
+  overflow:visible;
+
+  h1,h2,h3 {
+      font-family: Baskerville;
+      color: #aaa;
+      text-shadow: 1px 1px white, -1px -1px #444;
+  }
+  h1 {
+      font-size: 50px;
+  }
+  h2 {
+      font-size: 18px;
+      padding-left: 95px;
+      margin-top: -2px;
+  }
+
+  input[type=search] {
+      border-radius: 12px;
+  }
+
+  ul {
+      margin-left: -10px;
+      a {
+          font-family: Baskerville;
+      }
+  }
+
 }
 div#logo {
     
@@ -319,39 +346,13 @@ div#logo {
     background-position-y: -4px;
     
 }
-#logo h1 {
-    font-family: Baskerville;
-    font-size: 50px;
-    color: #aaa;
-    text-shadow: 1px 1px white, -1px -1px #444;
-}
-#logo h2 {
-    font-family: Baskerville;
-    font-size: 18px;
-    color: #aaa;
-    text-shadow: 1px 1px white, -1px -1px #444;
-    padding-left: 95px;
-    margin-top: -2px;
-}
-
-#logo input[type=search] {
-    border-radius: 12px;
-}
-
-#logo ul {
-    margin-left: -10px;
-}
-#logo ul a {
-    font-family: Baskerville;
-
-}
 
 
 #signin {
     position: absolute;
     left:50%;
-    top:50%;
-    margin: 60px 0 0 -90px;
+    top:25%;
+    margin: -60px 0 0 -108px;
     width:180px;
     height:120px;
     overflow:visible;
@@ -364,6 +365,8 @@ div#logo {
     padding-top: 15px;
     padding-left: 35px;
     color: #ddd;
+
+    .signup-area-inactive & { display:none; }
 
     img[name=account-illu] {
       display: block;
@@ -393,17 +396,97 @@ div#logo {
   }
 }
 
-#account-head {
-      display: block;
-      position: absolute;
-      top:0; right:0;
+@mixin rounded-input-appearance($font-size: 16px, 
+  $color: white, $background-color: transparent, 
+  $border-color: black,
+  $focus-color: white, $placeholder-color: #888) {
+      font-size: $font-size;
+      height: 1.6em;
+      border-radius: $font-size * 1.6 / 2;
+      background-color: $background-color;
+      border: 1px solid $border-color;
+      color: $color;
+      -webkit-appearance: textfield;
+      outline: none;
 
-    img[name=account-illu] {
-      display: block;
-      position: absolute;
-      right: 3px;
-      top: 3px;
-    }
+      &::focus {
+        border: 1px solid $focus-color;
+      }
+
+      //&::-moz-placeholder,
+      //&::-ms-input-placeholder
+      &::-webkit-input-placeholder {
+        color: $placeholder-color;
+        //text-shadow: white 1px 1px 1px;
+      }
+}
+
+#topbar {
+    display: block;
+    position: absolute;
+    top:0; right:0; left:0;
+
+    background-color: rgba(40,40,40,.8);
+    border-bottom: 1px solid rgba(0,0,0,.8);
+    @include box-shadow(rgba(0,0,0,.8) 2px 2px 10px);
+
+    .signup-area-active & { display:none; }
+
+  input[type=search] {
+      position:absolute;
+      top: 4px;
+      left: 50%;
+      width:50%;
+      margin-left: -25%;
+      padding:2px;
+      margin-top: 5px;
+
+      @include rounded-input-appearance($color: rgba(255, 255, 255, .5), $border-color: rgba(0,0,0,.2), $focus-color:rgba(250,250,250,.2));
+  }
+
+  img[name=account-illu] {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    background: rgba(0,0,0,.2);
+    border-radius: 5px;
+    padding: 2px 3px;
+  }
+}
+
+#textedit {
+    position: absolute;
+    top: 30px;
+    margin-right: 5px;
+    right:50%;
+    width: 480px;
+    height: 720px;
+    
+  .edit-area-inactive & { display:none; }
+
+  .buttons {
+      position:absolute;
+      left:-41px; width:35px;
+      top:25px; height:120px;
+
+      background-color: rgba(0, 0, 0, .2);
+      border-radius: 8px 0 0 8px;
+      padding: 5px 3px;
+  }
+
+}
+
+#textview {
+    position: absolute;
+    top: 30px;
+    margin-left: 5px;
+    left:50%;
+    width: 480px;
+    height: 720px;
+
+  .edit-area-inactive & { display:none; }
+
 }
 
 

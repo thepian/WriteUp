@@ -5,21 +5,40 @@ base-class: stage-base
 
     <nav id="signin" role="dialog" in-area="signup" action="signin-actions"></nav>
 
-    <nav id="account-head" in-area="settings edit">
-        <img src="images/icons/account-illu.svg" type="image/svg+xml" title="Your Account" name="account-illu">
-    </nav>
-
     <nav id="side" in-area="edit">
     </nav>
 
-    <header id="doc-title" class="initially-hidden">
+    <header id="topbar" in-area="settings edit" role="dialog" action="topbar-actions">
+        <div class="buttons">
+            <img src="images/icons/homepage.svg" type="image/svg+xml" role="button" title="Homepage" name="homepage" id="homepage-button">
+
+            <img src="images/icons/wiki.svg" type="image/svg+xml" role="button" title="Wiki" name="wiki" id="wiki-button">
+
+            <img src="images/icons/issues.svg" type="image/svg+xml" role="button" title="Issues" name="issues" id="issues-button">
+        </div>
         <input type="search" name="title" placeholder="Document Title">
+        <img src="images/icons/account-illu.svg" type="image/svg+xml" title="Your Account" role="button" name="account-illu">
+        <button role="button" name="edit">edit</button>
     </header>
 
-    <section id="doc-info" class="initially-hidden">
+    <section id="textedit" in-area="edit">
+        <header>
+            <input type="search" name="title" placeholder="Document Title">
+        </header>
+        <div class="buttons">
+            <img src="images/icons/homepage.svg" type="image/svg+xml" role="button" title="Homepage" name="homepage" id="homepage-button">
+
+            <img src="images/icons/wiki.svg" type="image/svg+xml" role="button" title="Wiki" name="wiki" id="wiki-button">
+
+            <img src="images/icons/issues.svg" type="image/svg+xml" role="button" title="Issues" name="issues" id="issues-button">
+        </div>
+        <textarea style="width:100%;height:100%;"></textarea>
     </section>
 
-    <section id="doc-text" class="initially-hidden">
+    <section id="textview" in-area="edit">
+        <header>
+            <input type="search" name="title" placeholder="Document Title">
+        </header>
         <div class="buttons">
             <img src="images/icons/homepage.svg" type="image/svg+xml" role="button" title="Homepage" name="homepage" id="homepage-button">
 

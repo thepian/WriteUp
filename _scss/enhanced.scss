@@ -4,6 +4,10 @@ appcache: default
 @import "essential/essential";
 
 $side-width: 200px;
+$topbar-height: 42px;
+
+$base-page-width: 480px;
+$base-page-height: 640px;
 
 body { height:100%; }
 
@@ -16,6 +20,11 @@ body, .main {
 	-o-user-select: none;
 	user-select: none;
 }
+
+#topbar {
+  height: $topbar-height;
+}
+
 #side {
     position:absolute;
     left:-170px; width:210px;
@@ -104,15 +113,6 @@ body, .main {
     position:absolute;
     left:$side-width; right:0;
     top:0; height:30px;
-    
-  input[type=search] {
-      width:80%;
-      font-size:16px;
-      padding:2px;
-      background-color:#aaa;
-      margin-top: 5px;
-      -webkit-appearance: textfield;
-  }
 }
 
 
@@ -128,18 +128,19 @@ body, .main {
     position:absolute;
     /*margin-left:60%;*/
     /*left:40px; */
-    right:0;
-    top:90px; bottom:0;
+    left: $side-width;
+    right:15px;
+    top:35px; bottom:15px;
+
 }
 
-#doc-text .buttons {
-    position:absolute;
-    left:-41px; width:35px;
-    top:25px; height:120px;
-
-background-color: rgba(0, 0, 0, .2);
-border-radius: 8px 0 0 8px;
-padding: 5px 3px;
+#textedit {
+  width: $base-page-width;
+  height: $base-page-height;
+}
+#textview {
+  width: $base-page-width;
+  height: $base-page-height;
 }
 
 body.initial .initially-hidden {
@@ -157,7 +158,22 @@ body > .content {
 }
 
 
+body {
+  position: relative;
+}
 
-@media all and (min-width: 500px){ .. }
-@media all and (min-width: 620px){ .. }
-@media all and (min-width: 950px){ .. }
+
+//@media all and (min-width: 500px){ }
+//@media all and (min-width: 620px){ }
+@media all and (width: 768px){ 
+  @import "enhanced/portrait";
+}
+@media all and (width: 1024px){ 
+  @import "enhanced/landscape";
+}
+@media all and (min-width: 778px) and (max-width: 1023px) {
+  @import "enhanced/desktop-portrait";
+}
+@media all and (min-width: 1034px) {
+  @import "enhanced/desktop-landscape";
+}

@@ -13,4 +13,30 @@ SigninAction.prototype.login = function(dialogEl) {
 	essential("activateArea")("settings");
 };
 
+var TopbarAction = Generator(function(){ 
+
+
+},DialogAction);
+DialogAction.variant("topbar-actions",TopbarAction);
+
+TopbarAction.prototype.edit = function(dialogEl) {
+	// debugger;
+	essential("activateArea")("edit");
+};
+
+TopbarAction.prototype.homepage = function(dialogEl) {
+	// debugger;
+	alert("homepage");
+};
+
+TopbarAction.prototype.wiki = function(dialogEl) {
+	// debugger;
+	alert("wiki");
+};
+
+TopbarAction.prototype.issues = function(dialogEl) {
+	// debugger;
+	alert("issues");
+};
+
 })();
