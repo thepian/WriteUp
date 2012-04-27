@@ -369,6 +369,7 @@ function Generator(mainConstr,options)
 		// migrate prototype
 		for(var n in mainConstr.prototype) generator.prototype[n] = mainConstr.prototype[n];
 		mainConstr.prototype = generator.prototype;
+		//TODO generator.fn = generator.prototype
 
 		
 		return generator;
@@ -632,6 +633,19 @@ Generator.restricted = [];
 		discardRestricted();
 	}
 
+    function doScrollCheck() {
+      try {
+        // If IE is used, use the trick by Diego Perini
+        // http://javascript.nwbox.com/IEContentLoaded/
+        win.document.documentElement.doScroll("left");
+      } catch(e) {
+        setTimeout(doScrollCheck, 1);
+        return;
+      }
+
+      // and execute any waiting functions
+      fireDomReady();
+    }  
 
 	function listenForDomReady() 
 	{
@@ -667,26 +681,6 @@ Generator.restricted = [];
 
 	      // The DOM ready check for Internet Explorer
 	      if (win.document.documentElement.doScroll && toplevel) {
-	        var doScrollCheck = function() {
-
-	          // stop searching if we have no functions to call 
-	          // (or, in other words, if they have already been called)
-	          if (readyList.length == 0) {
-	            return;
-	          }
-
-	          try {
-	            // If IE is used, use the trick by Diego Perini
-	            // http://javascript.nwbox.com/IEContentLoaded/
-	            win.document.documentElement.doScroll("left");
-	          } catch(e) {
-	            setTimeout(doScrollCheck, 1);
-	            return;
-	          }
-
-	          // and execute any waiting functions
-	          fireDomReady();
-	        }  
 	        doScrollCheck();
 	      }
 	    } 
