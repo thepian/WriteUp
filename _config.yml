@@ -1,11 +1,13 @@
 port: 5555
-domain: writeup.com
+#domain: writeup.com
 email: hello@writeup.com
 url: http://writeup.com
 img_url: http://writeup.com/images
 title: Write Up
 author: Henrik Vendelbo
 description: Web Page Specification for Quality Assurance
+
+css-compress: No
 
 exclude: 
 - Rakefile
