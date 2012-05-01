@@ -53,29 +53,125 @@ published: no
 	essential.set("HTMLScriptElement",HTMLScriptElement);
 
 
+    function _makeEventCleaner(listeners,bubble)
+    {
+        // must be called with element as this
+        function cleaner() {
+            if (this.removeEventListener) {
+                for(var n in listeners) {
+                    this.removeEventListener(n, listeners[n], bubble);
+                    delete listeners[n];
+                }
+            } else {
+                for(var n in listeners) {
+                    this.detachEvent('on'+ n, listeners[n]);
+                    delete listeners[n];
+                }
+            }
+        }
+        cleaner.listeners = listeners; // for removeEventListeners
+        return cleaner;
+    };
+
+
+    /**
+     * Register map of event listeners 
+     * { event: function }
+     * Using DOM style event names
+     * 
+     * @param {Object} eControl
+     * @param {Map} listeners Map from event name to function 
+     * @param {Object} bubble
+     */
+    function addEventListeners(eControl, listeners,bubble)
+    {
+        if (eControl._cleaners == undefined) eControl._cleaners = [];
+
+        // need to remember the function to call
+        // supports DOM 2 EventListener interface
+        function makeIeListener(eControl,fCallOrThis) {
+            var bListenerInstance = typeof fCallOrThis == "object";
+            
+            var oThis = bListenerInstance? fCallOrThis : eControl;
+            var fCall = bListenerInstance? fCallOrThis.handleEvent : fCallOrThis;
+            return function() { 
+                return fCall.call(eControl,window.event); 
+            };
+        } 
+
+        if (eControl.addEventListener) {
+            for(var n in listeners) {
+                eControl.addEventListener(n, listeners[n], bubble || false);
+            }
+            eControl._cleaners.push(_makeEventCleaner(listeners,bubble || false));
+        } else {
+            var listeners2 = {};
+            for(var n in listeners) {
+                listeners2[n] = makeIeListener(eControl,listeners[n]);
+                eControl.attachEvent('on'+n,listeners2[n]);
+            }
+            eControl._cleaners.push(_makeEventCleaner(listeners2,bubble || false));
+        }   
+    }
+    essential.declare("addEventListeners",addEventListeners);
+
+    //TODO modifyable events object on IE
+
+    //TODO removeEventListeners (eControl, listeners, bubble)
+
+    /**
+     * Cleans up registered event listeners and other references
+     * 
+     * @param {Object} eControl
+     */
+    function callCleaners(eControl)
+    {
+        var pCleaners = eControl._cleaners;
+        if (pCleaners != undefined) {
+            for(var i=0,c; c = pCleaners[i]; ++i) {
+                c.call(eControl);
+            }
+            pCleaners = undefined;
+        }
+    };
+
+    //TODO recursive clean of element and children?
+
+
 	function DialogAction(actionName) {
 		this.actionName = actionName;
 	} 
 	var DialogActionGenerator = essential.set("DialogAction",Generator(DialogAction));
 
-	
+
+    function resizeTriggersReflow(ev) {
+        debugger;
+    }
+
 	function DocumentRoles(handlers) {
-	    this.handlers = handlers || this.handlers || {};
+	    this.handlers = handlers || this.handlers || { enhance:{}, discard:{} };
 	    //TODO configure reference as DI arg
 	    var statefuls = ApplicationConfigGenerator(); // Ensure that config is present
 
+        if (window.addEventListener) {
+            window.addEventListener("resize",resizeTriggersReflow,false);
+            document.body.addEventListener("orientationchange",resizeTriggersReflow,false);
+        } else {
+            window.attachEvent("onresize",resizeTriggersReflow);
+        }
+        
 	    if (document.querySelectorAll) {
 	        var with_roles = document.querySelectorAll("*[role]");
 	        for(var i=0,e; e=with_roles[i]; ++i) {
 	            var role = e.getAttribute("role");
-	            (this.handlers[role] || this.default_enhance).call(this,e,role,statefuls.getConfig(e));
+	            (this.handlers.enhance[role] || DocumentRoles.default_enhance).call(this,e,role,statefuls.getConfig(e));
 	        }
 	    } else {
 	        var with_roles = document.getElementsByTagName("*");
 	        for(var i=0,e; e=with_roles[i]; ++i) {
 	            var role = e.getAttribute("role");
 	            if (role) {
-    	            (this.handlers[role] || this.default_enhance).call(this,e,role,statefuls.getConfig(e));
+    	            (this.handlers.enhance[role] || DocumentRoles.default_enhance).call(this,e,role,statefuls.getConfig(e));
 	            }
 	        }
 	    }
@@ -86,10 +182,26 @@ published: no
 	    ObjectType({ name:"handlers" })
 	];
 	
-	DocumentRoles.prototype.default_enhance = function(el) {
-	    
-	};
-	
+    DocumentRoles.discarded = function(instance) {
+        if (document.querySelectorAll) {
+            var with_roles = document.querySelectorAll("*[role]");
+            for(var i=0,e; e=with_roles[i]; ++i) {
+                var role = e.getAttribute("role");
+                (instance.handlers.discard[role] || DocumentRoles.default_discard).call(instance,e,role,statefuls.getConfig(e));
+                callCleaners(e);
+            }
+        } else {
+            var with_roles = document.getElementsByTagName("*");
+            for(var i=0,e; e=with_roles[i]; ++i) {
+                var role = e.getAttribute("role");
+                if (role) {
+                    (instance.handlers.discard[role] || DocumentRoles.default_discard).call(instance,e,role,statefuls.getConfig(e));
+                    callCleaners(e);
+                }
+            }
+        }
+    };
+
     function form_onsubmit(ev) {
         var frm = this;
         setTimeout(function(){
@@ -132,6 +244,10 @@ published: no
 
         var actionVariant = DialogActionGenerator.variant(action)(action);
         if (actionVariant[submitName]) actionVariant[submitName](this);
+        else {
+            var sn = submitName.replace("-","_").replace(" ","_");
+            if (actionVariant[sn]) actionVariant[sn](this);
+        }
         //TODO else dev_note("Submit of " submitName " unknown to DialogAction " action)
     }
 
@@ -147,19 +263,11 @@ published: no
         }
     }
 
-    function hook_dialog_buttons(el) {
-
-        function button_click(ev) {
-            ev = ev || event;
-            var e = ev.target || ev.srcElement;
-            if (e.type=="submit") el.submit(e); //TODO action context
-        }
-
-        var buttons = el.getElementsByTagName("button");
-        for(var i=0,e; e=buttons[i]; ++i) {
-            if (e.addEventListener) e.addEventListener("click",button_click);
-            else if (e.attachEvent) e.attachEvent("onclick",button_click);
-        }
+    function dialog_button_click(ev) {
+        ev = ev || event;
+        var e = ev.target || ev.srcElement;
+        if (e.getAttribute("role") == "button") this.submit(e); else
+        if (e.type=="submit") this.submit(e); //TODO action context
     }
 
 	DocumentRolesGenerator.enhance_dialog = DocumentRoles.enhance_dialog = function (el,role,config) {
@@ -176,16 +284,25 @@ published: no
 	            break;
 	            
 	        default:
-                hook_dialog_buttons(el);
                 el.submit = dialog_submit;
 	        	// debugger;
 	            //TODO capture enter from inputs, tweak tab indexes
 	            break;
 	    }
 	    
+        addEventListeners(el, {
+            "click": dialog_button_click
+        },false);
     };
-    
+
+    DocumentRolesGenerator.discard_dialog = DocumentRoles.discard_dialog = function (el,role,config) {
+    };
+
     DocumentRolesGenerator.enhance_sheet = DocumentRoles.enhance_sheet = function(el,role,config) {
+        
+    };
+
+    DocumentRolesGenerator.discard_sheet = DocumentRoles.discard_sheet = function(el,role,config) {
         
     };
 
@@ -193,6 +310,10 @@ published: no
         
     };
 
+    DocumentRoles.default_discard = function(el,role,config) {
+        
+    };
+    
     function Layouter(key,el,conf) {
 
     }
@@ -335,12 +456,5 @@ published: no
     	if (keys.length > 1) el = el.getElementByName(keys[1]);
     	return el;
     };
-
-	if (window.addEventListener) {
-		window.addEventListener("resize",resizeTriggersReflow,false);
-		document.body.addEventListener("orientationchange",resizeTriggersReflow,false);
-	} else {
-		window.attachEvent("onresize",resizeTriggersReflow);
-	}
 
 })();
