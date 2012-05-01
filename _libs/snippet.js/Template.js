@@ -671,7 +671,7 @@ HTMLTemplate.get = function(sName,oDocument)
 };
 
 // IE specific mods 
-if (navigator.userAgent.indexOf("Trident/") > -1) {
+if (navigator.userAgent.indexOf("MSIE/") > -1) {
 	
 	HTMLTemplate.isFragment = HTMLTemplate.isFragmentIE;
 }
