@@ -2,25 +2,23 @@
 appcache: default
 ---
 <!DOCTYPE HTML>
-<!--[if IEMobile 7 ]><html class="no-js iem7" manifest="default.appcache?v=1"><![endif]-->
-<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"><![endif]-->
-<!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]-->
-<!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" manifest="default.appcache?v=1" lang="en"><!--<![endif]-->
+<html class="no-js" lang="en">
 <head>
-	
-    <title>Placeholder Title</title>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>	
+  <link rel="apple-touch-icon" href="preview.png"/> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+
+  <meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" /> 
+
+  <title>Placeholder Title</title>
 	<meta name="description" content="{{ site.description }}">
 	<meta name="author" content="{{ site.author }}">
-	
-  <script src="/js/essentials.js" offline="yes"></script>
-  <script src="/js/application.js" offline="yes"></script>
-  <script inline-src="config"></script>
 
   <link rel="stylesheet" href="/css/basic.css" id="basic-css" offline="yes">
-  <!--[if gte IE 6]><link href="/css/enhanced.css" rel="stylesheet"><![endif] -->
-  <!--[if !IE]><!--><link href="/css/enhanced.css" rel="stylesheet" media="only all"><!--<![endif]-->
-  <link rel="stylesheet" href="/css/print.css?v=1" type="text/css" media="print">
+  <link href="/css/enhanced.css" rel="stylesheet" media="only all">
+  <!-- link rel="stylesheet" href="/css/print.css?v=1" type="text/css" media="print" -->
+	
+  <script src="/js/essentials.js" offline="yes"></script>
 </head>
 <body class="initial">
 
